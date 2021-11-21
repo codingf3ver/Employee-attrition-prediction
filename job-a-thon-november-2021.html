@@ -1,0 +1,2636 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> JOB-A-THON - November 2021 </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]},distributed_tracing:{enabled:true}};(window.NREUM||(NREUM={})).loader_config={agentID:"960534024",accountID:"3218962",trustKey:"3218962",xpid:"VwQGWV9VChAJUlFXBAIPXlM=",licenseKey:"NRJS-be20c4eac23bc807cb3",applicationID:"960533887"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(32),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{l?l-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(33),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError";if(!c.disabled){var l=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(14),t(13),"addEventListener"in window&&t(7),c.xhrWrappable&&t(15),d=!0)}s.on("fn-start",function(t,e,n){d&&(l+=1)}),s.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){U++,L=g.hash,this[u]=y.now()}function o(){U--,g.hash!==L&&i(0,!0);var t=y.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+g,e])}function a(t,e){t.on(e,function(){this[e]=y.now()})}var s="-start",c="-end",f="-body",u="fn"+s,d="fn"+c,p="cb"+s,l="cb"+c,h="jsTime",m="fetch",v="addEventListener",w=window,g=w.location,y=t("loader");if(w[v]&&y.xhrWrappable&&!y.disabled){var x=t(11),b=t(12),E=t(9),R=t(7),O=t(14),T=t(8),P=t(15),S=t(10),M=t("ee"),N=M.get("tracer"),C=t(23);t(17),y.features.spa=!0;var L,U=0;M.on(u,r),b.on(p,r),S.on(p,r),M.on(d,o),b.on(l,o),S.on(l,o),M.buffer([u,d,"xhr-resolved"]),R.buffer([u]),O.buffer(["setTimeout"+c,"clearTimeout"+s,u]),P.buffer([u,"new-xhr","send-xhr"+s]),T.buffer([m+s,m+"-done",m+f+s,m+f+c]),E.buffer(["newURL"]),x.buffer([u]),b.buffer(["propagate",p,l,"executor-err","resolve"+s]),N.buffer([u,"no-"+u]),S.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,m+s),a(T,m+"-done"),a(S,"new-jsonp"),a(S,"jsonp-end"),a(S,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,C(!0)),w[v]("load",i,C(!0)),w[v]("popstate",function(){i(0,U>1)},C(!0))}},{}],5:[function(t,e,n){function r(){var t=new PerformanceObserver(function(t,e){var n=t.getEntries();s(v,[n])});try{t.observe({entryTypes:["resource"]})}catch(e){}}function o(t){if(s(v,[window.performance.getEntriesByType(w)]),window.performance["c"+p])try{window.performance[h](m,o,!1)}catch(t){}else try{window.performance[h]("webkit"+m,o,!1)}catch(t){}}function i(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var a=t("ee"),s=t("handle"),c=t(14),f=t(13),u=t(6),d=t(23),p="learResourceTimings",l="addEventListener",h="removeEventListener",m="resourcetimingbufferfull",v="bstResource",w="resource",g="-start",y="-end",x="fn"+g,b="fn"+y,E="bstTimer",R="pushState",O=t("loader");if(!O.disabled){O.features.stn=!0,t(9),"addEventListener"in window&&t(7);var T=NREUM.o.EV;a.on(x,function(t,e){var n=t[0];n instanceof T&&(this.bstStart=O.now())}),a.on(b,function(t,e){var n=t[0];n instanceof T&&s("bst",[n,e,this.bstStart,O.now()])}),c.on(x,function(t,e,n){this.bstStart=O.now(),this.bstType=n}),c.on(b,function(t,e){s(E,[e,this.bstStart,O.now(),this.bstType])}),f.on(x,function(){this.bstStart=O.now()}),f.on(b,function(t,e){s(E,[e,this.bstStart,O.now(),"requestAnimationFrame"])}),a.on(R+g,function(t){this.time=O.now(),this.startPath=location.pathname+location.hash}),a.on(R+y,function(t){s("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),u()?(s(v,[window.performance.getEntriesByType("resource")]),r()):l in window.performance&&(window.performance["c"+p]?window.performance[l](m,o,d(!1)):window.performance[l]("webkit"+m,o,d(!1))),document[l]("scroll",i,d(!1)),document[l]("keypress",i,d(!1)),document[l]("click",i,d(!1))}}},{}],6:[function(t,e,n){e.exports=function(){return"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver}},{}],7:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],8:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=i(arguments),e={};o.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return o.emit(n+"start",[t,a],s),s.then(function(t){return o.emit(n+"end",[null,t],s),t},function(t){throw o.emit(n+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(33),a=t(32);e.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,p=s.Response,l=s.fetch,h="prototype",m="nr@context";d&&p&&l&&(a(u,function(t,e){r(d[h],e,f),r(p[h],e,f)}),r(s,"fetch",c),o.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(c+"done",[null,e],n)}else o.emit(c+"done",[t],n)}))},{}],9:[function(t,e,n){var r=t("ee").get("history"),o=t("wrap-function")(r);e.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],10:[function(t,e,n){function r(t){function e(){f.emit("jsonp-end",[],l),t.removeEventListener("load",e,c(!1)),t.removeEventListener("error",n,c(!1))}function n(){f.emit("jsonp-error",[],l),f.emit("jsonp-end",[],l),t.removeEventListener("load",e,c(!1)),t.removeEventListener("error",n,c(!1))}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var d=s(a),p="function"==typeof d.parent[d.key];if(p){var l={};u.inPlace(d.parent,[d.key],"cb-",l),t.addEventListener("load",e,c(!1)),t.addEventListener("error",n,c(!1)),f.emit("new-jsonp",[t.src],l)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(d);return e?e[1]:null}function a(t,e){var n=t.match(l),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function s(t){var e=t.match(p);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var c=t(23),f=t("ee").get("jsonp"),u=t("wrap-function")(f);if(e.exports=f,o()){var d=/[?&](?:callback|cb)=([^&#]+)/,p=/(.*)\.([^.]+)/,l=/^(\w+)(\.|$)(.*)$/,h=["appendChild","insertBefore","replaceChild"];Node&&Node.prototype&&Node.prototype.appendChild?u.inPlace(Node.prototype,h,"dom-"):(u.inPlace(HTMLElement.prototype,h,"dom-"),u.inPlace(HTMLHeadElement.prototype,h,"dom-"),u.inPlace(HTMLBodyElement.prototype,h,"dom-")),f.on("dom-start",function(t){r(t[0])})}},{}],11:[function(t,e,n){var r=t("ee").get("mutation"),o=t("wrap-function")(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],12:[function(t,e,n){function r(t){var e=i.context(),n=s(t,"executor-",e,null,!1),r=new f(n);return i.context(r).getCtx=function(){return e},r}var o=t("wrap-function"),i=t("ee").get("promise"),a=t("ee").getOrSetContext,s=o(i),c=t(32),f=NREUM.o.PR;e.exports=i,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){i.emit("propagate",[null,!o],a,!1,!1),o=o||!t}}var o=!1;c(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var a=e.apply(f,arguments),s=f.resolve(a);return s}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&i.emit("propagate",[t,!0],n,!1,!1),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),c(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),o.wrapInPlace(f.prototype,"then",function(t){return function(){var e=this,n=o.argsToArray.apply(this,arguments),r=a(e);r.promise=e,n[0]=s(n[0],"cb-",r,null,!1),n[1]=s(n[1],"cb-",r,null,!1);var c=t.apply(this,n);return r.nextPromise=c,i.emit("propagate",[e,!0],c,!1,!1),c}}),i.on("executor-start",function(t){t[0]=s(t[0],"resolve-",this,null,!1),t[1]=s(t[1],"resolve-",this,null,!1)}),i.on("executor-err",function(t,e,n){t[1](n)}),i.on("cb-end",function(t,e,n){i.emit("propagate",[n,!0],this.nextPromise,!1,!1)}),i.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=i.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],13:[function(t,e,n){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],14:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],15:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){x.push(t),m&&(E?E.then(a):w?w(a):(R=-R,O.data=R))}function a(){for(var t=0;t<x.length;t++)r([],x[t]);x.length&&(x=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(7);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),p=t(23),l=NREUM.o,h=l.XHR,m=l.MO,v=l.PR,w=l.SI,g="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],x=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(g,o,p(!1))}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(h,b),b.prototype=h.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),m){var E=v&&v.resolve();if(!w&&!v){var R=1,O=document.createTextNode(R);new m(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===g||a()})},{}],16:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=l.generateSpanId(),m=l.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||c(t)&&p())&&(w.traceContextParentHeader=o(h,m),w.traceContextStateHeader=i(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function o(t,e){return"00-"+e+"-"+t+"-01"}function i(t,e,n,r,o){var i=0,a="",s=1,c="",f="";return o+"@nr="+i+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:e,ti:n}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var o=h(n.allowed_origins[r]);if(t.hostname===o.hostname&&t.protocol===o.protocol&&t.port===o.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function p(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var l=t(29),h=t(18);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],17:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):i(this,t),n.cbTime=this.cbTime,s("xhr",[e,n,this.startTime,this.endTime,"xhr"],this))}}function o(t,e){var n=c(e),r=t.params;r.hostname=n.hostname,r.port=n.port,r.protocol=n.protocol,r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function i(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(18),f=t(16).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],p=d.length,l=t("id"),h=t(24),m=t(22),v=t(19),w=t(23),g=NREUM.o.REQ,y=window.XMLHttpRequest;a.features.xhr=!0,t(15),t(8),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){i(e,t)},w(!1)),h&&(h>34||h<10)||t.addEventListener("progress",function(t){e.lastSize=t.loaded},w(!1))}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=m(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<p;s++)e.addEventListener(d[s],this.listener,w(!1))}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("xhr-resolved",function(){this.endTime=a.now()}),u.on("addEventListener-end",function(t,e){e instanceof y&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof y&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof y&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var o=f(this.parsedOrigin);if(o&&(o.newrelicHeader||o.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var i={};for(var a in r)i[a]=r[a];i.headers=new Headers(r.headers||{}),e(i.headers,o)&&(this.dt=o),t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&e(t[0].headers,o)&&(this.dt=o)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),this.dt=e,t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},i=this.target;"string"==typeof i?n=i:"object"==typeof i&&i instanceof g?n=i.url:window.URL&&"object"==typeof i&&i instanceof URL&&(n=i.href),o(this,n);var s=(""+(i&&i instanceof g&&i.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}),u.on("fetch-done",function(t,e){this.endTime=a.now(),this.params||(this.params={}),this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime,this.endTime,"fetch"],this)})}},{}],18:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,o={};e.href=t,o.port=e.port;var i=e.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=e.hostname||n.hostname,o.pathname=e.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return o.sameOrigin=a&&(!e.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],19:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?o(t.response):"text"===n||""===n||void 0===n?o(t.responseText):void 0}var o=t(22);e.exports=r},{}],20:[function(t,e,n){function r(){}function o(t,e,n,r){return function(){return u.recordSupportability("API/"+e+"/called"),i(t+e,[f.now()].concat(s(arguments)),n?null:this,r),n?void 0:this}}var i=t("handle"),a=t(32),s=t(33),c=t("ee").get("tracer"),f=t("loader"),u=t(25),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",h=l+"ixn-";a(p,function(t,e){d[e]=o(l,e,!0,"api")}),d.addPageAction=o(l,"addPageAction",!0),d.setCurrentRouteName=o(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(h+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=o(h,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),u.recordSupportability("API/noticeError/called"),i("err",[t,f.now(),!1,e])}},{}],21:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],22:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],23:[function(t,e,n){var r=!1;try{var o=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,o),window.removeEventListener("testPassive",null,o)}catch(i){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],24:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],25:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return i("storeMetric",n,null,"api"),n}function o(t,e){var n=[s,t,{name:t},e];return i("storeEventMetrics",n,null,"api"),n}var i=t("handle"),a="sm",s="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:s},recordSupportability:r,recordCustom:o}},{}],26:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(i=Math.max((new Date).getTime(),i))-a}function o(){return i}var i=(new Date).getTime(),a=i,s=t(34);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=o},{}],27:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],28:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function o(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(c&&c<r.startTime)return;p("lcp",[r])}}function i(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){if(t instanceof v&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),g=!0,p("timing",["fi",e,n])}}function s(t){"hidden"===t&&(c=l.now(),p("pageHide",[c]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,f,u,d,p=t("handle"),l=t("loader"),h=t(31),m=t(23),v=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(w){}u=new PerformanceObserver(o);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(w){}d=new PerformanceObserver(i);try{d.observe({type:"layout-shift",buffered:!0})}catch(w){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(t){document.addEventListener(t,a,m(!1))})}h(s)}},{}],29:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){return a(16)}function i(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,o=window.crypto||window.msCrypto;o&&o.getRandomValues&&Uint8Array&&(n=o.getRandomValues(new Uint8Array(31)));for(var i=[],a=0;a<t;a++)i.push(e().toString(16));return i.join("")}e.exports={generateUuid:r,generateSpanId:o,generateTraceId:i}},{}],30:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],31:[function(t,e,n){function r(t){function e(){t(s&&document[s]?document[s]:document[i]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,o(!1))}var o=t(23);e.exports=r;var i,a,s;"undefined"!=typeof document.hidden?(i="hidden",a="visibilitychange",s="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",a="webkitvisibilitychange",s="webkitVisibilityState")},{}],32:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],33:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],34:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,o,i,a){if(a!==!1&&(a=!0),!l.aborted||i){t&&a&&t(n,r,o);for(var s=e(o),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var p=d[y[n]];return p&&p.push([x,n,r,s]),s}}function i(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return p[t]=p[t]||o(n)}function w(t,e){l.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:i,addEventListener:i,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:s,aborted:!1};return x}function i(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",f=t("gos"),u=t(32),d={},p={},l=e.exports=o();e.exports.getOrSetContext=i,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!P++){var t=T.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(R,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+T.offset],null,"api"),s("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=h+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function o(){"complete"===v.readyState&&i()}function i(){s("mark",["domContent",a()+T.offset],null,"api")}var a=t(26),s=t("handle"),c=t(32),f=t("ee"),u=t(30),d=t(27),p=t(21),l=t(23),h=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,w="addEventListener",g="attachEvent",y=m.XMLHttpRequest,x=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var E=""+location,R={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1212.min.js"},O=y&&x&&x[w]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:u,disabled:b};if(!b){t(20),t(28),v[w]?(v[w]("DOMContentLoaded",i,l(!1)),m[w]("load",r,l(!1))):(v[g]("onreadystatechange",o),m[g]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var P=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var i,a,u,p;try{a=this,i=d(arguments),u="function"==typeof r?r(i,a):r||{}}catch(l){o([l,"",[i,a,c],u],t)}s(n+"start",[i,a,c],u,f);try{return p=e.apply(a,i)}catch(h){throw s(n+"err",[i,a,h],u,f),h}finally{s(n+"end",[i,a,p],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,i(e,nrWrapper,t),nrWrapper)}function r(t,e,r,o,i){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,o,c,i))}function s(n,r,i,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,i,e,a)}catch(c){o([c,n,r,i],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=p,n}function o(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function i(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(i){o([i],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function s(t,e){var n=e(t);return n[p]=t,i(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(33),p="nr@original",l=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,17,5,3,4]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"NRJS-be20c4eac23bc807cb3","applicationID":"960533887","transactionName":"YlcBZEUHX0AFB0wMVlsdJUVZBUVaCwoXEVZAQA1VTkhSXAoQXRZNG0QKVUAVC1ALCkwASkFtE1xWH1ZBCxFWAQ==","queueTime":0,"applicationTime":79,"agent":""}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no user-scalable=no">
+    <meta name="description" content=" JOB-A-THON - November 2021 | Job Opportunities with Top Companies">
+    <meta name="author" content="">
+    <meta property="og:url" content="https://datahack.analyticsvidhya.com/contest/job-a-thon-november-2021/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title"         content="" />
+    <meta property="og:description"   content=" JOB-A-THON - November 2021 | Job Opportunities with Top Companies" />
+    <meta property="og:image"         content=" https://datahack-prod.s3.ap-south-1.amazonaws.com/__sized__/og_image/og_updated_5_9G9Xv08-thumbnail-600x600.png " />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+
+   <!-- STYLESHEET -->
+    
+
+      <link rel='icon' id='favicon' type='image/x-icon' href='https://www.analyticsvidhya.com/wp-content/uploads/2015/02/logo_square_v2.jpg'>
+      <link rel='apple-touch-icon' href='https://www.analyticsvidhya.com/wp-content/uploads/2015/02/logo_square_v2.jpg'>
+      <link rel='apple-touch-icon' sizes='76x76' href='https://www.analyticsvidhya.com/wp-content/uploads/2015/02/logo_square_v2.jpg'>
+      <link rel='apple-touch-icon' sizes='114x114' href='https://www.analyticsvidhya.com/wp-content/uploads/2015/02/logo_square_v2.jpg'>
+      <link rel='apple-touch-icon' sizes='144x144' href='https://www.analyticsvidhya.com/wp-content/uploads/2015/02/logo_square_v2.jpg'>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" integrity="sha256-BtbhCIbtfeVWGsqxk1vOHEYXS6qcvQvLMZqjtpWUEx8=" crossorigin=anonymous>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.11/css/intlTelInput.css">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://automation.analyticsvidhya.com/static/css/stripBootstrap.css">
+    
+
+    <link rel="stylesheet" href="/static/CACHE/css/output.2f5257df4c35.css" type="text/css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+
+    
+      <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MPSM42V');</script>
+    
+</head>
+
+<body class=" pages  contest-playground ">
+<div class="black-rbga" style="display:none;"></div>
+
+  <section id="avFlashSale" class="py-1 alert alert-warning alert-dismissible fade show m-0" style="display:none;" role="alert">
+  <div class="container">
+      <div class="row">
+          <div class="av-sale-content w-100">
+              <p></p>
+              <a id="hrefId" class="btn btn-light ml-1"></a>
+              <div id="clockdiv" style="display:none;">
+                  <span>
+                  <h4 class="days" id="day"></h4>
+                  <sup>D</sup>
+                  </span>
+                  <span>
+                  <h4 class="hours" id="hour"></h4>
+                  <sup>H</sup>
+                  </span>
+                  <span>
+                  <h4 class="minutes" id="minute"></h4>
+                  <sup>M</sup>
+                  </span>
+                  <span>
+                  <h4 class="seconds" id="second"></h4>
+                  <sup>S</sup>
+                  </span>
+              </div>
+          </div>
+          <button type="button" class="close ml-auto py-1" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+  </div>
+</section>
+
+
+
+  
+<header>
+  <nav class="navbar navbar-expand-lg bg-white">
+    <div class="container">
+		  <a class="navbar-brand" href="/">
+		  	<img loading='lazy' class = "logo" src="https://av-public-assets.s3.ap-south-1.amazonaws.com/logos/av-logo-svg.svg" alt="Analytics Vidhya">
+		  </a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <i class="mobile-menu-iocn"></i>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+          <li class="nav-item mr-3">
+                <a href="https://www.analyticsvidhya.com/blog/" class="nav-link"
+                  >Blog</a>
+              </li>
+              <li class="nav-item mr-3">
+                <a href="https://courses.analyticsvidhya.com/" class="nav-link"
+                  >Courses</a>
+              </li>
+              
+              <li class="nav-item mr-3" >
+                <a href = "http://blackbelt.analyticsvidhya.com/plus?utm_source=datahack&utm_medium=Navbar&utm_campaign=BB" target="_blank" class="nav-link"
+                  >BlackBelt</a>
+              </li>
+              <li class="nav-item mr-3">
+                <a href="https://datahack.analyticsvidhya.com/contest/job-a-thon-november-2021/?utm_source=datahack&utm_medium=navbar" class="nav-link text-danger"
+                  >Jobathon</a>
+              </li>
+              
+                <li class="nav-item mr-3" >
+                  <a href="/top-competitor" class="nav-link text-danger"
+                    >User Rankings</a>
+                </li>
+                <!-- <li class="nav-item mr-2">
+                  <a href="https://www.analyticsvidhya.com/corporate/index.php#get_in_touch" class="nav-link text-danger"
+                    >Organize a Hackathon</a>
+                </li> -->
+                <li class="nav-item mr-2" >
+                  <a href = /approach/top-approaches/ target="_blank" class="nav-link text-danger"
+                    >Top Approaches</a>
+                </li>
+              
+            </ul>
+		    <div class="form-inline my-2 my-lg-0">
+          <ul class="nav">
+            <li class="nav-item av-search-icon">
+              <i class="fas fa-search" aria-hidden="true" id="sbtn-id"></i>
+            </li>
+            
+            <!-- Notification -->
+              <li class="nav-item av-notofication">
+                
+                <script src="/static/js/notify.a77b5d2fdd2d.js" type="text/javascript"></script>
+                  <script>
+        notify_badge_id='live_notify_badge';
+        notify_menu_id='live_notify_list';
+        notify_api_url='/notifications/api/unread_count/';
+        notify_fetch_count='5';
+        notify_unread_url='/notifications/unread/';
+        notify_mark_all_unread_url='/notifications/mark-all-as-read/';
+        notify_refresh_period=600000;
+    register_notifier(fill_notification_list);register_notifier(fill_notification_badge);</script>
+                  <a href="/notifications/unread">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge badge-pill badge-danger" id="notification_count"><span id='live_notify_badge' class=''>6</span></span>
+                  </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="palceholder">
+                    
+                    <span>M</span>
+                    
+                  </span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="left: -88px !important;">
+                  <a class="dropdown-item" href="/user">My Profile</a>
+                  
+                  <a class="dropdown-item" href="https://profile.analyticsvidhya.com/accounts/profile/">Edit Profile</a>
+                  <a class="dropdown-item" href="javascript:{}" id="logout_button_id" onclick="document.getElementById('logout-form').submit(); return false;">Logout</a>
+                </div>
+              </li>
+          
+          </ul>
+        </div>
+		  </div>
+    </div>
+    </nav>
+
+</header>
+<div class="av-modal-full-screen" id="searchlink">
+  <button type='button' class='close' id="close" aria-label='Close'><span>esc</span></button>
+  <div class="modalform">
+    <form id="search">
+      <input type="hidden" name="csrfmiddlewaretoken" value="QMlRZq6DWXbP5CkIwPvfi4L2rDvNlvRm0j7dnnfcsnQFHmVxOMde3VMIWMytqlmq">
+      <div class="form-group">
+          <input type="text" class="form-control" autocomplete="off" id="search-contest-input-id" placeholder="Keyword">
+          <button type="submit" class="btn btn-default" id="sbtn"><i class="fas fa-search" aria-hidden="true"></i></button>
+          <div id="search_contest_id"></div>
+        </div>
+    </form>
+  </div>
+</div>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script>
+
+  
+  
+    
+    
+  
+
+  //old ga
+  // window.dataLayer = window.dataLayer || [];
+  // function gtag(){dataLayer.push(arguments);}
+  // gtag('js', new Date());
+
+  // gtag('config', 'UA-67190105-1');
+
+</script>
+<script>
+$(document).ready(function() {
+  $.ajax({
+    url: "/notifications/api/unread_count/",
+    dataType: 'json',
+    type: "GET",
+    success: function(data) {
+      $('#notification_count').html(data.unread_count)
+    },
+    error: function(err) {
+      console.log(err)
+    }
+    });
+    console.log(window.location.pathname == "/notifications/unread/")
+    if(window.location.pathname == "/notifications/unread/") {
+      console.log("inside pathname")
+      ("/notifications/unread/");
+    }
+    
+  $("#search_contest_id p").remove();
+  var index = -1;
+   $('#search-contest-input-id').keydown(function(e) {
+    var pressed=false;
+    if($('#search-contest-input-id').val()==''){
+      index = -1;
+      $("#search_contest_id p").remove();
+      $(this).removeClass('focus-active');
+    }
+    if(event.keyCode==38){
+    // if up arrow key is pressed then decrease the index value.
+      index = index - 1;
+      if(index<0){
+        //if handles the overflow
+        index=0
+      }
+      pressed=true
+    }
+    else if(event.keyCode==40){
+      //if down arrow key is pressed then increase the index value.
+      index = index + 1
+
+      if(index > $('#search_contest_id p').length-1){
+        // it handles the overflow
+        index=0
+      }
+      pressed=true
+    }
+    if(pressed==true){
+      /* if any arrow key is pressed then set the value of
+        that p to the input box... focus is handelled by 'active-search' class
+      */
+      $('#search_contest_id p').removeClass('active-search')
+      $('#search_contest_id p').eq(index).addClass('active-search')
+      $('#search-contest-input-id').val($('#search_contest_id p').eq(index).text())
+    }
+    if(event.keyCode==9){
+      // if tab is pressed then close the dropdown
+      index = -1
+      $('#search_contest_id p').remove()
+      $('#search-contest-input-id').removeClass('focus-active');
+    }
+  });
+
+  $('#search-contest-input-id').keyup(function(e) {
+    /*when ever any key is pressed this event got fired*/
+    if($('#search-contest-input-id').val()==''){
+      //if the input tag is empty then remove the focus form it and do not open the suggestor
+      $("#search_contest_id p").remove();
+      $(this).removeClass('focus-active');
+    }
+    var contest_name = $(this).val();
+    // no ajax for space(32), backspace(8), delete, down-arrow,up-arrow
+    if(contest_name.length > 0 && event.keyCode != 40 && event.keyCode != 38 && event.keyCode != 32 && event.keyCode !=8){
+      $.ajax({
+        type: "POST",
+        url: "/contest/searched-contest",
+        data: {'contest_name': contest_name, csrfmiddlewaretoken:$('#search input[name=csrfmiddlewaretoken]').val()},
+        success:function(response){
+          $("#search_contest_id").empty();
+          var len = response['contests'].length
+          if (len==0){
+            // if length is 0 then close the dropdown css
+            $('#search-contest-input-id').removeClass('focus-active');
+          }
+          else if(len!=0 && event.keyCode==8){
+            //if length not equal to 0 and backspace is pressed
+            $('#search-contest-input-id').addClass('focus-active');
+
+          }
+          else{
+            $('#search-contest-input-id').addClass('focus-active');
+            $('#search-contest-input-id').focus();
+            // $('#search_contest_id').css('width', '50%');
+
+
+          }
+          for (var i=0;i<response['contests'].length;i++){
+            $("<p>"+response['contests'][i]+"</p>").appendTo("#search_contest_id");
+          }
+          $("#search_contest_id p").bind("click",function(){
+            $("#search-contest-input-id").val($(this).text()).focus()
+            $("#search_contest_id").empty();
+            $('#search-contest-input-id').removeClass('focus-active');
+          });
+        }
+      });
+      if(event.keyCode==13) {
+        $('#sbtn').click();
+      }
+    }
+  });
+  $("#sbtn").on("click", function(e){
+    var search = $("#search-contest-input-id").val();
+    var data = {'contest_name': search};
+    $.ajax({
+        type: "POST",
+        url: "/contest/contest-slug",
+        data: data,
+        success:function(response){
+          if (response['contest_slug']) {
+            var url_link = "/contest/"+response['contest_slug']+"/";
+            $("#search").attr("action",url_link);
+            window.location.href = url_link;
+          }
+          else {
+          console.log("Error no such contest found")
+          }
+        },
+        error:function(err){
+          console.log("error");
+        }
+    });
+  });
+  $('#sbtn-id').click(function(e) {
+    $("#searchlink").toggleClass('open');
+  });
+  $('#close').click(function(e) {
+    $("#searchlink").removeClass('open');
+  });
+
+
+});
+
+// Esc click to close form
+$(document).keydown(function(e) {
+  if (e.keyCode == 27) {
+    $("#searchlink").removeClass('open');
+  }
+});
+</script>
+
+
+
+<div class= "workspace">
+  
+   
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header"  style = "background-color:#d43f3a;">
+          <h4 class="modal-title" id = "modal-header" style = "color:white;">Error </h4>
+          <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p id = "modal-body" style = "color:black;"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="success_modal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header"  style = "background-color:#449d44;">
+          <h4 class="modal-title" id = "modal-header" style = "color:white;">Success </h4>
+          <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p id = "modal-body" style = "color:black;">Payment Received.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header"  style = "background-color:#449d44;">
+          <h4 class="modal-title" id = "modal-header1" style = "color:white;">New Data Added</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p id = "modal-body1" style = "color:black;" >Please check the data set. New Data has been added along with the previous one. New file name : Alcohol consumption.</p>
+        </div>
+          <div class="modal-footer">
+            <!-- <img loading='lazy' id="screenshot-img" src="" style="display:none;">
+            <button id="linkedin-share" class="sharer btn btn-success d-none" data-sharer="Linkedin">Share on Linkedin</button>
+            <button type="button" class="btn btn-success d-none" id="linkedin-screenshot">Want to share on Linkedin?</button> -->
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal for warning anonymous users -->
+  <div class="modal fade" id="warningModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header"  style = "background-color:#449d44;">
+          <h4 class="modal-title" id = "warning-modal-header" style = "color:white;">New Data Added</h4>
+          <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p id = "warning-modal-body" style = "color:black;" >Please check the data set. New Data has been added along with the previous one. New file name : Alcohol consumption.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="slack_invite">Proceed</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal 3 -->
+  <div class="modal fade" id="myModal3" role="dialog" style = "width:80%;margin-left:10%">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header"  style = "background-color:#449d44;">
+          <h4 class="modal-title" id = "modal-header" style = "color:white;">Set Final Submissions</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body" style = "height:400px;overflow-y : auto;width:100%">
+           <p id = "final_submission_set_success"></p>
+           <form action = "" method = "post" id = "form-submissions">
+               <input type="hidden" name="csrfmiddlewaretoken" value="QMlRZq6DWXbP5CkIwPvfi4L2rDvNlvRm0j7dnnfcsnQFHmVxOMde3VMIWMytqlmq">
+               <table class = "table table-striped" id = "" style = "padding-left:20px;width:100%;">
+                 <tr style = "height:40px;">
+                    
+                     <th style = "" class = "col-sm-5">Answer Commit Message</th>
+                     <th style = "" class = "col-sm-2">Score</th>
+                     <th style = "" class = "col-sm-3 ">Time of Submission</th>
+                     <th style = "" class = "col-sm-2">Code File</th>
+                     <th style = "padding-right:10px;">Select</th>
+                     
+                </tr>
+               </table>
+               <table class = "table-striped" id = "data" style = "padding-left:20px;width:100%;">
+               </table>
+               <table id = "final_1">
+                 <tr>
+                   <td>
+                     <button type = "button" class = "btn btn-primary col-sm-6 col-sm-offset-3" style = "margin-top:30px;" id="submit" >Set final Submission</button>
+                   </td>
+                 </tr>
+               </table>
+               <table id = "final_2">
+                 <tr>
+                   <td>
+                     <button type = "button" class = "btn btn-primary col-sm-6 col-sm-offset-3" style = "margin-top:30px;" id="submit_2" >Set Submissions to check private score</button>
+                   </td>
+                 </tr>
+               </table>
+           </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<!-- similar contest -->
+ <div class="modal fade" id= "similarcontests" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header"  style = "background-color:#449d44;">
+          <h4 class="modal-title" id = "modal-header" style = "color:white;">Thank you for registering.</h4>
+
+          <a href="/contest/job-a-thon-november-2021/" class="close mr-0">&times;</a>
+        </div>
+        <div class="modal-body">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="add_approach_model" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="add_approach_modal_label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="add_approach_modal_label">Add Approach Link</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" name="csrfmiddlewaretoken" value="QMlRZq6DWXbP5CkIwPvfi4L2rDvNlvRm0j7dnnfcsnQFHmVxOMde3VMIWMytqlmq">
+          <label for="id_approach_link" class="control-label col-lg-2">User approach link</label>
+          <div class="controls col-lg-8">
+              <input class="textinput textInput form-control" id="id_approach_link" name="approach_link"
+                                             type="url" value=""
+                                             data-leaderboard_url=""
+                                             required>
+
+          </div>
+          <p id="add_approach_message_error" class="text-danger"></p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn av-btn text-white px-4" onclick="submitApproach(this)" >Create</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- CONTEST DETAILS PAGE START -->
+  <section class="av-contest-details-page">
+    <!-- <div class="av-contest-cover-img" style="background: rgba(9, 15, 80, 0.3) url('https://datahack-prod.s3.ap-south-1.amazonaws.com/__sized__/contest_cover/cover_updated_3_ZpDQMJW-thumbnail-1200x1200.png') no-repeat; background-size: cover;  "> </div> -->
+    <div class="container">
+      <div class="row">
+        <div class="card">
+            <picture>
+	            
+                <source media="(max-width: 767px)" srcset="https://datahack-prod.s3.amazonaws.com/contest_icon/icon_4_zKAf8z0.png" class="card-img-top">
+		          
+                <img loading='lazy' src="https://datahack-prod.s3.ap-south-1.amazonaws.com/__sized__/contest_cover/cover_updated_3_ZpDQMJW-thumbnail-1200x1200.png" alt="Flowers" class="card-img-top">
+            </picture>
+          <div class="card-header">
+            <div class="alert-box">
+</div>
+            <div class="card-header-info">
+              <h1 class="card-title">JOB-A-THON - November 2021</h1>
+              <div class="card-header-contest-info">
+                <span>
+                  <i class="fas fa-map-marker-alt"></i>
+                  
+                    Online
+                  
+                </span>
+                
+                  <span>
+                    <i class="far fa-calendar-alt"></i>
+                    19-11-2021 12:00 AM to 21-11-2021 11:59 PM
+                  </span>
+                
+
+              </div>
+              <ul class="m-0 p-0 mt-2">
+                <li>
+                  <span>
+                    <i class="fas fa-user"></i>
+                    
+                      7652
+                    
+                  </span>
+                  <p>Registered</p>
+                </li>
+                
+                <li>
+                    <span>
+                      <i class="fas fa-trophy"></i>
+                      Job Opportunities with Top Companies
+                    </span>
+                  <p>Prizes</p>
+                </li>
+              </ul>
+            </div>
+            <div class="card-header-timer">
+              <div id="countdown-timer"></div>
+              
+                
+                  
+                    <button type="button" class="btn text-white px-4 av-btn mt-3" id = "participate" disabled>Registered </button>
+                  
+                
+              
+            </div>
+
+          </div>
+          <div class="spinner-border text-primary d-tabel mx-auto mt-3 mb-3" role="status" id="av-api-response-loader" style="display:none;">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="card-body">
+            
+              <!-- Tabs -->
+              <div class="card-body-tabs">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="About-tab" data-toggle="tab" href="#About" role="tab" aria-controls="About" aria-selected="true" onclick="pushTabDetailsToDataLater('About Tab', 'JOB-A-THON - November 2021', 'hiring')">About</a>
+                  </li>
+                  
+                    
+                      
+                        
+                          
+                            <li class="nav-item">
+                              <a class="nav-link" id="ProblemStatement-tab" data-toggle="tab" href="#ProblemStatement" role="tab" aria-controls="ProblemStatement" aria-selected="false" onclick="pushTabDetailsToDataLater('ProblemStatement Tab', 'JOB-A-THON - November 2021', 'hiring')">Problem Statement</a>
+                            </li>
+                            
+                              
+                                <li class="nav-item">
+                                  <a class="nav-link" id="SolutionChecker-tab" data-toggle="tab" href="#SolutionChecker" role="tab" aria-controls="SolutionChecker" aria-selected="false" onclick="pushTabDetailsToDataLater('SolutionChecker Tab', 'JOB-A-THON - November 2021', 'hiring')">Solution Checker</a>
+                                </li>
+                              
+                            
+                          
+                          <li class="nav-item">
+                            <a class="nav-link" id="MySubmissions-tab" data-toggle="tab" href="#MySubmissions" role="tab" aria-controls="MySubmissions" aria-selected="false">My Submissions</a>
+                          </li>
+                        
+                      
+                      
+                        <li class="nav-item">
+                          <a class="nav-link" id="LeaderBoard-tab" data-toggle="tab" href="#LeaderBoard" role="tab" aria-controls="LeaderBoard" aria-selected="false" onclick="
+                          showLeaderboard(this)">Leaderboard</a>
+                        </li>
+                      
+                      
+                        <li class="nav-item">
+                          <a class="nav-link" id="SkillTestLeaderBoard-tab" data-toggle="tab" href="#SkillTestLeaderBoard" role="tab" aria-controls="SkillTestLeaderBoard" aria-selected="false" onclick="
+                          showSkillTestLeaderBoard(this)">SkillTest Leaderboard</a>
+                        </li>
+                      
+                    
+                  
+                  
+                    
+                  
+                  
+                  <li class="nav-item">
+                    <a class="nav-link" id="Discuss-tab" data-toggle="tab" href="#DiscussTab" role="tab" aria-controls="DiscussTab" aria-selected="false" onclick="
+                    showDiscussions(this)">Discuss</a>
+                  </li>
+                  
+                  
+                  
+                    
+                      <li class="nav-item">
+                        <a class="nav-link" id="Status-tab" data-toggle="tab" href="#StatusTab" role="tab" aria-controls="StatusTab" aria-selected="false" onclick="
+                        showhpstatustab(this)">Status</a>
+                      </li>
+                    
+                  
+                </ul>
+              </div>
+              <!-- Tabs Content -->
+              <div class="tab-content card-body-contents" id="myTabContent">
+                <div class="tab-pane fade show active" id="About" role="tabpanel" aria-labelledby="about-tab">
+                  
+
+<div class="row">
+  <div class="col-lg-8 col-md-8 col-sm-12">
+  
+    
+    
+
+
+    
+
+      
+        <p style="text-align: justify;">Data Science jobs are rapidly emerging amongst the hottest jobs in the industry. With almost every organisation wanting Data Scientists as a part of their team, being a part of these top organisations has never been easier&hellip;</p>
+
+<h2><br />The largest Data Science Hiring Event is Back!</h2>
+
+<p style="text-align: justify;">And this event is your one shot at scoring your dream job.</p>
+
+<p style="text-align: justify;">Analytics Vidhya presents &ldquo;<strong>JOB-A-THON</strong>&rdquo; - <strong>India's Largest Data Science Hiring Event</strong>, where 1600+ of candidates have interviewed for over 65+ companies. You could be among them too!&nbsp;</p>
+
+<p style="text-align: justify;">At JOB-A-THON every enthusiast will get the <strong>opportunity to showcase their skills</strong> and get a chance to interview with<strong> top companies</strong> for <strong>leading job roles</strong> in Data Science, Machine Learning &amp; Analytics.&nbsp;</p>
+
+<h2><br />Stay tuned to know more about Participating Companies &amp; Job Opportunities</h2>
+
+<iframe src="https://player.vimeo.com/video/638948407?h=e085946868" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+<h2><br />Participating Companies &amp; Job Opportunities</h2>
+
+<div class="logo-card"><a href="https://datahack.analyticsvidhya.com/jobathon/company/fractal-4" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/Fractal.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/deloitte" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/Deloitte.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/latent-view-3" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/Latent-View.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/cars24-2" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/Cars24.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/genpact-3" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/Genpact.png" alt="img" /></a>
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/hdfc-bank-4" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/HDFC_.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/kotak-mahindra-bank-2" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/kotak-mahindra-bank.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/flipkart-2" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/Flipkart.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/paypal-3" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/paypal-.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/eclerx-4" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/eClerx.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/paisabazaar-2" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/PaisaBazaar.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/gramener-3" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/Gramener.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/idfc" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/IDFC.jpg" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/miq-2" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/MiQ.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/meesho-2" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/Meesho.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/tiger-analytics-3" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/Tiger-Analytics.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/circle-base" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/Circle-Base.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/iks-health-2" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/IKS-Health.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/bdb" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/BDB.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/mpokket" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/mPokket.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/cogito-3" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/Cogito.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/smart-cube-3" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/Smart_Cube.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/comcast-2" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/comcast.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/propellor" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/Propellor.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/mpokket" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/mPokket-1.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/advatix" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/Advatix.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/symphonyai-3" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/Symphony-AI.png" alt="img" /></a>
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/chola" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/chola-logo.png" alt="img" /></a>
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/acl-digital" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/ACL_Logo.png" alt="img" /></a>
+
+<a href="https://datahack.analyticsvidhya.com/jobathon/company/tesco" target="_blank"><img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/11/tesco.png" alt="img" /></a>
+
+</div>
+
+<p style="text-align: justify;">&nbsp;</p>
+
+<h2>Open Job Profiles (Stay tuned for more)</h2>
+
+<table class="table table-bordered table-responsive" style="width: 681px;">
+<thead class="thead-light">
+<tr style="height: 42px;">
+<th style="height: 42px; width: 102px;" scope="col">#</th>
+<th style="height: 42px; width: 164px;" scope="col">Companies</th>
+<th style="height: 42px; width: 560px;" scope="col">Designation</th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 14px;">
+<th style="vertical-align: middle; height: 27px; width: 102px; text-align: center;" rowspan="2" scope="row">1</th>
+<td style="vertical-align: middle; height: 27px; width: 164px;" rowspan="2">ACL Digital</td>
+<td style="height: 14px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/acl-digital/service-line-leader-data-scienceai-mldlbusiness-an" target="_blank">Service Line Leader: Data Science/AI / ML/DL/Business Analytics</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/acl-digital/lead-data-scientist-11" target="_blank">Lead Data Scientist</a></td>
+</tr>
+<tr style="height: 14px;">
+<th style="vertical-align: middle; height: 53px; width: 102px; text-align: center;" rowspan="4" scope="row">2</th>
+<td style="vertical-align: middle; height: 53px; width: 164px;" rowspan="4">Advatix</td>
+<td style="height: 14px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/advatix/operation-research-analystconsultant" target="_blank">Operation Research Analyst/Consultant</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/advatix/sr-manager" target="_blank">Sr. Manager</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/advatix/sr-manager-2" target="_blank">Sr. Manager</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/advatix/consultant-2" target="_blank">Consultant</a></td>
+</tr>
+<tr style="height: 13px;">
+<th style="vertical-align: middle; height: 13px; width: 102px; text-align: center;" scope="row">3</th>
+<td style="vertical-align: middle; height: 13px; width: 164px;">BDB</td>
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/bdb/data-scientist-33" target="_blank">Data Scientist</a></td>
+</tr>
+<tr style="height: 13px;">
+<th style="vertical-align: middle; height: 13px; width: 102px; text-align: center;" scope="row">4</th>
+<td style="vertical-align: middle; height: 13px; width: 164px;">Bridge i2i</td>
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/bridgei2i-4/business-analyst-6" target="_blank">Business Analyst</a></td>
+</tr>
+<tr style="height: 16px;">
+<th style="vertical-align: middle; height: 29px; width: 102px; text-align: center;" rowspan="2" scope="row">5</th>
+<td style="vertical-align: middle; height: 29px; width: 164px;" rowspan="2">Cars24</td>
+<td style="height: 16px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/cars24-2/machine-learning-data-engineering" target="_blank">ML Engineer</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/cars24-2/data-scientist-34" target="_blank">Data Scientist</a></td>
+</tr>
+<tr style="height: 13px;">
+<th style="vertical-align: middle; height: 13px; width: 102px; text-align: center;" scope="row">6</th>
+<td style="vertical-align: middle; height: 13px; width: 164px;">Circlebase</td>
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/circle-base/nlp-engineer-data-scientist-2" target="_blank">NLP Engineer (Data Scientist)</a></td>
+</tr>
+<tr style="height: 16px;">
+<th style="vertical-align: middle; height: 29px; width: 102px; text-align: center;" rowspan="2" scope="row">7</th>
+<td style="vertical-align: middle; height: 29px; width: 164px;" rowspan="2">Chola</td>
+<td style="height: 16px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/chola/senior-data-scientist-10" target="_blank">Senior Data Scientist</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/chola/data-scientist-38" target="_blank">Data Scientist</a></td>
+</tr>
+<tr style="height: 14px;">
+<th style="vertical-align: middle; height: 40px; width: 102px; text-align: center;" rowspan="3" scope="row">8</th>
+<td style="vertical-align: middle; height: 40px; width: 164px;" rowspan="3">Comcast</td>
+<td style="height: 14px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/comcast-2/engineer-3_ml-_java-nlp" target="_blank">Engineer 3_ML _Java, NLP</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/comcast-2/engineer-3_ml-_edge-devices" target="_blank">Engineer 3_ML _Edge Devices</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/comcast-2/engineer-3_ml-_ccomputervision_edge-devices" target="_blank">Engineer 3_ML _C++,Computervision_Edge Devices</a></td>
+</tr>
+<tr style="height: 23px;">
+<th style="vertical-align: middle; height: 23px; width: 102px; text-align: center;" scope="row">9</th>
+<td style="vertical-align: middle; height: 23px; width: 164px;">Deloitte</td>
+<td style="height: 23px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/deloitte/consultant-sr-consultant-manager" target="_blank">Consultant/ Sr. Consultant / Manager</a></td>
+</tr>
+<tr style="height: 23px;">
+<th style="vertical-align: middle; height: 23px; width: 102px; text-align: center;" scope="row">10</th>
+<td style="vertical-align: middle; height: 23px; width: 164px;">eClerx</td>
+<td style="height: 23px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/eclerx-4/advanced-analytics-consultant-4" target="_blank">Advanced Analytics Consultant</a></td>
+</tr>
+<tr style="height: 14px;">
+<th style="vertical-align: middle; height: 40px; width: 102px; text-align: center;" rowspan="3" scope="row">11</th>
+<td style="vertical-align: middle; height: 40px; width: 164px;" rowspan="3">Flipkart</td>
+<td style="height: 14px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/flipkart-2/senior-business-analyst-3" target="_blank">Senior Business Analyst</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/flipkart-2/data-analyst-10" target="_blank">Data Analyst</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/flipkart-2/business-analyst-7" target="_blank">Business Analyst</a></td>
+</tr>
+<tr style="height: 15px;">
+<th style="vertical-align: middle; height: 28px; width: 102px; text-align: center;" rowspan="2" scope="row">12</th>
+<td style="vertical-align: middle; height: 28px; width: 164px;" rowspan="2">Fractal</td>
+<td style="height: 15px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/fractal-4/sql-analyst-3" target="_blank">SQL Analyst</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/fractal-4/mlops-engineer-4" target="_blank">MLOps Engineer</a></td>
+</tr>
+<tr style="height: 15px;">
+<th style="vertical-align: middle; height: 28px; width: 102px; text-align: center;" rowspan="2" scope="row">13</th>
+<td style="vertical-align: middle; height: 28px; width: 164px;" rowspan="2">GoDigit</td>
+<td style="height: 15px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/godigit-2/ai-engineer-4" target="_blank">AI Engineer</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/godigit-2/ai-architect-2" target="_blank">AI Architect</a></td>
+</tr>
+<tr style="height: 23px;">
+<th style="vertical-align: middle; height: 23px; width: 102px; text-align: center;" scope="row">14</th>
+<td style="vertical-align: middle; height: 23px; width: 164px;">Genpact</td>
+<td style="height: 23px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/genpact-3/machine-learning-expert-data-science-and-insight-3" target="_blank">Machine Learning Expert &ndash;Data Science and Insights</a></td>
+</tr>
+<tr style="height: 23px;">
+<th style="vertical-align: middle; height: 23px; width: 102px; text-align: center;" scope="row">15</th>
+<td style="vertical-align: middle; height: 23px; width: 164px;">IDFC</td>
+<td style="height: 23px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/idfc/data-scientist-32" target="_blank">Data Scientist</a></td>
+</tr>
+<tr style="height: 23px;">
+<th style="vertical-align: middle; height: 23px; width: 102px; text-align: center;" scope="row">16</th>
+<td style="vertical-align: middle; height: 23px; width: 164px;">IKS Health</td>
+<td style="height: 23px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/iks-health-2/data-scientist-36" target="_blank">Data Scientist</a></td>
+</tr>
+<tr style="height: 24px;">
+<th style="vertical-align: middle; height: 24px; width: 102px; text-align: center;" scope="row">17</th>
+<td style="vertical-align: middle; height: 24px; width: 164px;">HDFC Bank</td>
+<td style="height: 24px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/hdfc-bank-4/crain-data-scientist-2" target="_blank">CRAIN-Data Scientist</a></td>
+</tr>
+<tr style="height: 14px;">
+<th style="vertical-align: middle; height: 27px; width: 102px; text-align: center;" rowspan="2" scope="row">18</th>
+<td style="vertical-align: middle; height: 27px; width: 164px;" rowspan="2">Kotak Mahindra Bank</td>
+<td style="height: 14px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/kotak-mahindra-bank-2/data-scientist-31" target="_blank">Data Scientist</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/kotak-mahindra-bank-2/business-analyst-5" target="_blank">Business Analyst</a></td>
+</tr>
+<tr style="height: 14px;">
+<th style="vertical-align: middle; height: 14px; width: 102px; text-align: center;" scope="row">19</th>
+<td style="vertical-align: middle; height: 14px; width: 164px;">Latent View</td>
+<td style="height: 14px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/latent-view-3/data-analyst-8" target="_blank">Data Analyst</a></td>
+</tr>
+<tr style="height: 14px;">
+<th style="vertical-align: middle; height: 27px; width: 102px; text-align: center;" rowspan="2" scope="row">20</th>
+<td style="vertical-align: middle; height: 27px; width: 164px;" rowspan="2">Lumiq</td>
+<td style="height: 14px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/lumiq/lead-data-scientist-10" target="_blank">Lead Data Scientist</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/lumiq/data-scientist-37" target="_blank">Data Scientist</a></td>
+</tr>
+<tr style="height: 14px;">
+<th style="vertical-align: middle; height: 40px; width: 102px; text-align: center;" rowspan="3" scope="row">21</th>
+<td style="vertical-align: middle; height: 40px; width: 164px;" rowspan="3">MIQ</td>
+<td style="height: 14px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/miq-2/data-scientist-30" target="_blank">Data Scientist</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/miq-2/sr-data-scientist" target="_blank">Sr. Data Scientist</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/miq-2/data-scientist-ii" target="_blank">Data Scientist II</a></td>
+</tr>
+<tr style="height: 14px;">
+<th style="vertical-align: middle; height: 53px; width: 102px; text-align: center;" rowspan="4" scope="row">22</th>
+<td style="vertical-align: middle; height: 53px; width: 164px;" rowspan="4">mPokket</td>
+<td style="height: 14px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/mpokket/data-scientist-29" target="_blank">Data Scientist</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/mpokket/senior-data-scientist-8" target="_blank">Senior Data Scientist</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/mpokket/leadvp-data-scientist" target="_blank">Lead/VP Data Scientist</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/mpokket/data-analyst-9" target="_blank">Data Analyst</a></td>
+</tr>
+<tr style="height: 12px;">
+<th style="vertical-align: middle; height: 12px; width: 102px; text-align: center;" scope="row">23</th>
+<td style="vertical-align: middle; height: 12px; width: 164px;">PaisaBazaar</td>
+<td style="height: 12px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/paisabazaar-2/data-analytics-2" target="_blank">Data Analytics</a></td>
+</tr>
+<tr style="height: 12px;">
+<th style="vertical-align: middle; height: 12px; width: 102px; text-align: center;" scope="row">24</th>
+<td style="vertical-align: middle; height: 12px; width: 164px;">Propellor</td>
+<td style="height: 12px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/propellor/senior-data-scientist-9" target="_blank">Senior Data Scientist</a></td>
+</tr>
+<tr style="height: 11px;">
+<th style="vertical-align: middle; height: 37px; width: 102px; text-align: center;" rowspan="3" scope="row">25</th>
+<td style="vertical-align: middle; height: 37px; width: 164px;" rowspan="3">Paypal</td>
+<td style="height: 11px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/paypal-3/sales-analytics-insights-lead" target="_blank">Sales Analytics &amp; Insights Lead</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/paypal-3/data-science-2" target="_blank">Data Science</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/paypal-3/data-science-manager-global-data-science" target="_blank">Data Science Manager, Global Data Science</a></td>
+</tr>
+<tr style="height: 11px;">
+<th style="vertical-align: middle; height: 37.175px; width: 102px; text-align: center;" rowspan="3" scope="row">26</th>
+<td style="vertical-align: middle; height: 37.175px; width: 164px;" rowspan="3">Smart Cube</td>
+<td style="height: 11px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/smart-cube-3/senior-manager-data-science" target="_blank">Senior Manager - Data Science</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/smart-cube-3/manager-data-science-3" target="_blank">Manager - Data Science</a></td>
+</tr>
+<tr style="height: 13.175px;">
+<td style="height: 13.175px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/smart-cube-3/assistant-manager-data-science-2" target="_blank">Assistant Manager &ndash; Data Science</a></td>
+</tr>
+<tr style="height: 11px;">
+<th style="vertical-align: middle; height: 37px; width: 102px; text-align: center;" rowspan="5" scope="row">27</th>
+<td style="vertical-align: middle; height: 37px; width: 164px;" rowspan="5">Tesco</td>
+<td style="height: 11px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/tesco/manager-data-analysis" target="_blank">Manager - Data Analysis</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/tesco/analyst" target="_blank">Analyst</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/tesco/lead-analyst" target="_blank">Lead Analyst</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/tesco/manager-data-analysis-operational-analytics" target="_blank">Manager - Data Analysis (Operational Analytics)</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/tesco/sr-manager-3" target="_blank">Sr. Manager</a></td>
+</tr>
+<tr style="height: 11px;">
+<th style="vertical-align: middle; height: 37px; width: 102px; text-align: center;" rowspan="3" scope="row">28</th>
+<td style="vertical-align: middle; height: 37px; width: 164px;" rowspan="3">Tiger Analytics</td>
+<td style="height: 11px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/tiger-analytics-3/data-scientist-35" target="_blank">Data Scientist</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/tiger-analytics-3/python-developer-analyst-senior-analyst" target="_blank">Python Developer (Analyst / Senior Analyst)</a></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 560px;"><a href="https://datahack.analyticsvidhya.com/jobathon/tiger-analytics-3/senior-analyst-3" target="_blank">Senior Analyst</a></td>
+</tr>
+</tbody>
+</table>
+
+<h2>Why should you participate?</h2>
+
+<p style="text-align: justify;"><em>&ldquo;You miss 100% of the opportunities you don&rsquo;t take&rdquo;</em>, and JOB-A-THON, is <strong>NOT</strong> an opportunity you want to miss.</p>
+
+<p style="text-align: justify;">Be it the top MNCs or fast growing startups, we have <strong>multiple job openings</strong> across different industry verticals and across various cities in India (including Bangalore, Pune, Delhi-NCR, Mumbai, Chennai &amp; Hyderabad).</p>
+
+<p><strong>Register now</strong> and make the best of this opportunity!</p>
+
+<h2><br />Who should participate?</h2>
+
+<p>This opportunity is open for all data science enthusiasts, statisticians, data scientists, business analysts &amp; students.</p>
+
+<h2><br />How JOB-A-THON works?</h2>
+
+<p><img class="alignnone wp-image-85527 size-full" src="https://cdn.analyticsvidhya.com/wp-content/uploads/2021/10/howtowork.jpg" alt="" width="512" height="328" /></p>
+
+<h2>Rules of Participation</h2>
+
+<ol>
+<li>The contest starts on 19th Nov 2021, 00:00:00 (IST).The data set and the problem statement will be released at the same time</li>
+<li>Entries submitted after the contest is closed, will not be considered</li>
+<li>Only Individual participation is allowed in this hackathon</li>
+<li>Use of an external dataset is not allowed</li>
+<li>Participation is free-of-cost</li>
+<li>Throughout the hackathon, you are expected to respect fellow hackers and act with high integrity</li>
+<li>Analytics Vidhya holds the right to disqualify any participant at any stage of the competition if the participant(s) are deemed to be acting fraudulently</li>
+<li>In case of any dispute over rankings and leaderboard, the decision of Analytics Vidhya shall be final</li>
+<li>Interview shortlisting will be done by specific companies basis their own criteria (apart from leaderboard ranking)</li>
+</ol>
+      
+    
+
+    
+    
+    <input type="hidden" name="purpose" id="purpose" value="hiring">
+  </div>
+  <!-- RIGIT SIDE HTML FOR ADDD -->
+  <div class="col-lg-4 col-md-4 col-sm-12">
+    <div class="contest-card-right-side">
+         
+
+<div style="margin-top:20px; margin-bottom: 5px;">
+  
+  
+  
+  
+    <div class="spinner-border text-primary d-tabel mx-auto mt-3 mb-3" role="status" id="av-slack-preloader" style="display:none;">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <button type="button" class="av-btn-outline btn text-capitalize d-table mx-auto px-4 mb-3"  id="warning_message_slack"  >Join Slack Live Chat</button>
+  
+  
+    
+      <button type="button" class="av-btn-red challenge-btn btn text-capitalize d-table mx-auto px-4 mb-3"  id="warning_message_share_challenge"  >Challenge a friend</button>
+    
+  
+  
+  <!--SocialShare-->
+  
+    <ul>
+      <li>
+          <a href="https://www.facebook.com/sharer.php?u=https://datahack.analyticsvidhya.com%2Fcontest%2Fjob-a-thon-november-2021%2F%3Futm_source%3Dfb_share%26utm_medium%3Ddh_social&t=JOB-A-THON - November 2021" onclick="ga('send', {'hitType': 'event', 'eventCategory': 'SocialShare', 'eventAction': 'clicked', 'eventLabel': 'Facebook'});" title="Share on Facebook..." class="popup">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+      </li>
+      <li>
+          <a href="https://twitter.com/share?utm_source=twitter_share&utm_medium=dh_social&url=https://datahack.analyticsvidhya.com+/contest/job-a-thon-november-2021/&text=Hey! I am participating in an exciting problem by @AnalyticsVidhya JOB-A-THON - November 2021 Compete and Learn. #Datahack" onclick="ga('send', {'hitType': 'event', 'eventCategory': 'SocialShare', 'eventAction': 'clicked', 'eventLabel': 'Twitter'});" class="popup">
+            <i class="fab fa-twitter"></i>
+          </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://datahack.analyticsvidhya.com&title=JOB-A-THON - November 2021&source=" class="popup">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    </ul>
+  
+  
+  <!-- Share Contest Modal -->
+  <div class="modal fade" id="share-contest-modal" tabindex="-1" role="dialog" aria-labelledby="share-contest-modal-CenterTitle" aria-hidden="true">
+    <div class="modal-dialog fixed-top" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Challenge a friend</h5>
+            </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span>esc</span>
+        </button>
+        <div class="modal-body">
+          <div id="show_contest_field" class="showContestField">
+            <input type="text" class="form-control" id="share_with_others" name="search_user" autocomplete="off" placeholder="Enter Name" />
+            <button type="submit" class="btn btn-default" id="share_contest_button">Share</button>
+            <div id="users_list_share" class="showUsers"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  
+    <div id="datahack-avbanner">
+      <a href=""><img loading='lazy' class="" src="" alt="ALT" style="display: none;"></a>
+    </div>
+  
+</div>
+<script type="text/javascript" src="/static/js/debounce.09949f9f21c3.js"></script>
+ <script>
+ $(document).ready(function() {
+  $("#users_list_share p").remove();
+  var index = -1;
+  $('#share_with_others').keydown(function(e){
+    var pressed=false
+    if($('#share_with_others').val()==''){
+      $("#users_list_share p").remove();
+      $(this).removeClass('focus-active');
+    }
+    if(e.keyCode==38){
+      // if up arrow key is pressed then decrease the index value.
+      index--;
+      if(index<0){
+        //if handles the overflow
+        index=0
+      }
+      pressed=true
+    }
+    else if(e.keyCode==40){
+      //if down arrow key is pressed then increase the index value.
+      index++
+      if(index > $('#users_list_share p').length-1){
+        // it handles the overflow
+        index=0
+      }
+      pressed=true
+    }
+    if(pressed==true){
+      /* if any arrow key is pressed then set the value of
+        that div to the input box... focus is handelled by 'active-search' class
+       */
+      $('#users_list_share p').removeClass('active-search')
+      $('#users_list_share p').eq(index).addClass('active-search')
+      $('#share_with_others').val($('#users_list_share p').eq(index).text())
+    }
+    if(e.keyCode==9){
+      // if tab is pressed then close the dropdown
+      $('#users_list_share p').remove()
+      $('#share_with_others').removeClass('focus-active');
+    }
+  });
+  $('#share_with_others').keyup(function(e){
+      /*when ever any key is pressed this event got fired*/
+      if($('#share_with_others').val()==''){
+        //if the input tag is empty then remove the focus form it and do not open the suggestor
+        $("#users_list_share p").remove();
+        $(this).removeClass('focus-active');
+      }
+      var user_name = $(this).val();
+      // no ajax for space(32), backspace(8), delete, down-arrow,up-arrow
+      if(user_name.length > 0 && e.keyCode != 40 && e.keyCode != 38 && e.keyCode != 32 && e.keyCode !=8){
+        $.ajax({
+          type: "POST",
+          url: "/contest/job-a-thon-november-2021/search_mates/",
+          data: {user_name: user_name},
+          success:function(response){
+           $("#users_list_share").empty();
+           var len = response['users'].length
+            if (len==0){
+              // if length is 0 then close the dropdown css
+              $('#share_with_others').removeClass('focus-active');
+            }
+            else if(len!=0 && e.keyCode==8){
+              //if length not equal to 0 and backspace is pressed
+              $('#share_with_others').addClass('focus-active');
+            }
+            else{
+              $('#share_with_others').addClass('focus-active');
+              $('#share_with_others').focus()
+
+            }
+            for (var i=0;i<response['users'].length;i++){
+              $("<p>"+response['users'][i].av_discuss_user_id+"</p>").appendTo("#users_list_share");
+            }
+            $("#users_list_share p").bind("click",function(){
+              $("#share_with_others").val($(this).text()).focus()
+              $("#users_list_share").empty();
+              $('#share_with_others').removeClass('focus-active');
+            });
+          }
+        });
+        if(event.keyCode==13) {
+        $('#share_contest_button').click();
+      }
+      }
+  });
+    $("#slack_invite_av_btn").on("click", function(){
+      console.log("slack invite button was clicked")
+      $('#av-slack-preloader').css("display", "block")
+      $('#slack_invite_av_btn').css("display", "none")
+      $('#warningModal').modal('hide');
+      var data = {"email":"", "first_name":"md546", "csrfmiddlewaretoken":"QMlRZq6DWXbP5CkIwPvfi4L2rDvNlvRm0j7dnnfcsnQFHmVxOMde3VMIWMytqlmq"};
+      $.ajax({
+        type : "POST",
+        url : "/slack",
+        data : data,
+        success : function(data)
+        {
+          $('#av-slack-preloader').css("display", "none")
+          $('#slack_invite_av_btn').css("display", "block")
+          if (data["data"]["ok"])
+          {
+            $("#modal-body1").html("You have been successfully invited. Please check your inbox for slack invite");
+            $("#modal-header1").html("Success");
+            $('#myModal1').modal('show');
+          }
+          else{
+            console.log("error was ", data["data"]);
+            if (data["data"]["ok"] == false) {
+              $("#modal-body").html(data["data"]["error"]);
+            } else {
+              $("#modal-body").html("Some error occurred. Please try again later");
+            }
+
+            $('#myModal').modal('show');
+          }
+        }
+      });
+    });
+
+    $("#warning_message_slack").click(function(){
+        $("#warning-modal-body").html("We cannot ensure your anonymity on slack. click to proceed anyways.");
+        $("#warning-modal-header").html("Warning");
+        $('#warningModal').modal('show');
+    });
+    $("#warning_message_share_challenge").click(function(){
+        $("#warning-modal-body").html("You cannot challenge a friend as you are anonymous user. click to proceed anyways.");
+        $("#warning-modal-header").html("Warning");
+        $('#warningModal').modal('show');
+    });
+  });
+$("#share_contest_button").click(function(){
+  var user_name = $("#share_with_others").val();
+  $("#share-contest-modal").modal("hide");
+  $.ajax({
+    type: "POST",
+    data: {user_name: user_name},
+    url: "/contest/job-a-thon-november-2021/share/",
+    success:function(response){
+      console.log("in success share");
+      // alert("Mail sent successfully")
+      if(response['requested_user_status'] == 0) {
+        alert("No such user found");
+      }
+    },
+    error:function(err){
+      console.log("in error share");
+    }
+  });
+  // var u = ''
+  // console.log('u', u)
+})
+ </script>
+ <script>
+ function editor_platform(){
+   window.open("https://editor.analyticsvidhya.com/", "_blank");
+ }
+ </script>
+
+
+    </div>
+  </div>
+</div>
+
+                </div>
+                <div class="tab-pane fade" id="ProblemStatement" role="tabpanel" aria-labelledby="ProblemStatement-tab">
+                  
+
+    
+      
+        <h2>Instructions:</h2>
+        <ul>
+          <li>1st Assessment is MCQ - Skill Test</li>
+          <li>You will have 2 attempt for the MCQ test</li>
+          <li>The Skill test will have 30 questions with each question having a timer of 60 seconds.</li>   
+          <li>The questions will come from four subjects - Python, SQL, EDA & Statistics and Machine Learning</li>
+          <li>Please attempt all the questions, there is no negative marking.</li> 
+          <li>2nd Assessment is ML Hackathon.</li>
+          <li>Only after giving the Skill test once, you will be able to download the data set and make submissions.</li>
+          <li>Though you will be able to read the problem statement for the Hackathon even before giving the Skill test</li>
+          <li>Once Assessment is given, your rank will be displayed in the Leaderboard.</li>
+        </ul> 
+        
+          <div class="mb-2">
+              <h2>You have successfully completed Assessment 1</h2>
+          </div>
+        
+      
+    
+    
+<h2></h2>
+
+  
+      <p>
+    <meta charset="utf-8">
+</p>
+<p dir="ltr"><span style="box-sizing: border-box; font-size: 20px; font-family: Arial, Helvetica, sans-serif; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Predicting Employee Attrition</span><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 16px;"><span style="box-sizing: border-box; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; font-family: Arial, Helvetica, sans-serif;"><span class="Apple-tab-span" style="box-sizing: border-box; white-space: pre;">&nbsp; &nbsp;&nbsp;</span></span></span></span></p>
+<p dir="ltr"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><span style="box-sizing: border-box; background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">In recent years, attention has increasingly been paid to human resources (HR), since worker quality and skills represent a growth factor and a real competitive advantage for companies. After proving its mettle in sales and marketing, artificial intelligence is also becoming central to employee-related decisions within HR management.&nbsp;</span><span style="font-size: 16px; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; float: none; box-sizing: border-box; background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; display: inline !important;">Organizational growth largely depends on staff retention. Losing employees frequently impacts the morale of the organization and hiring new employees is more expensive than retaining existing ones.&nbsp;</span></span></span></p>
+<p dir="ltr"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><span style="box-sizing: border-box; background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">You are working as a data scientist with HR Department of a large insurance company focused on sales team attrition. Insurance sales teams help insurance companies generate new business by contacting potential customers and selling one or more types of insurance. The department generally sees high attrition and thus staffing becomes a crucial aspect.&nbsp;</span></span></span></p>
+<p dir="ltr"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><span style="box-sizing: border-box; background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">To aid staffing, you are provided with the monthly information for a segment of employees for 2016 and 2017 and tasked to&nbsp;predict whether a current employee will be leaving the organization in the upcoming two quarters (01 Jan 2018 - 01 July 2018)&nbsp;or not, given:</span></span></span></p>
+<p dir="ltr"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"><span style="box-sizing: border-box; background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">1. Demographics of the employee (city, age, gender etc.)</span><br style="box-sizing: border-box;"><span style="box-sizing: border-box; background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">2. Tenure&nbsp;information (joining date, Last Date)</span><br style="box-sizing: border-box;"><span style="box-sizing: border-box; background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">3. Historical data regarding the performance of the employee (Quarterly rating, Monthly business acquired,&nbsp;</span><span style="font-size: 16px; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; float: none; box-sizing: border-box; background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; display: inline !important;">designation, salary</span><span style="box-sizing: border-box; background-color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">)</span></span></span></p>
+<p><span style="color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;"><br></span></p>
+<p><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><span style="box-sizing: border-box; font-size: 20px;"><strong>Data Dictionary</strong></span></span></span></p>
+<p><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 16px;"><span style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-weight: bolder;">Train Data</span></span></span></span><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><span style="box-sizing: border-box;"><br style="box-sizing: border-box;"></span></span></span></p>
+<table border="0" cellpadding="0" cellspacing="0" width="427">
+    <tbody style="box-sizing: border-box;">
+        <tr height="21" style="box-sizing: border-box; height: 16pt;">
+            <td height="21" style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; height: 16pt; width: 179px; border: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap;" width="87"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><span style="box-sizing: border-box;">Variable</span></span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; border-left: none; width: 741px; border-top: 0.5pt solid windowtext; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap;" width="340"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><span style="box-sizing: border-box;">Definition</span></span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; height: 16pt; border-top: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 179px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">MMMM-YY</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; border-top: none; border-left: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 741px;">
+                <div style="text-align: left;"><span style="color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;">Reporting Date (Monthly)</span></div>
+            </td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; height: 16pt; border-top: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 179px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">Emp_ID</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; border-top: none; border-left: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 741px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">Unique id for employees</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; height: 16pt; border-top: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 179px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">Age</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; border-top: none; border-left: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 741px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">Age of the employee</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; height: 16pt; border-top: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 179px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">Gender</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; border-top: none; border-left: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 741px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">Gender of the employee</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; height: 16pt; border-top: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 179px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><span style="box-sizing: border-box;">City</span></span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; border-top: none; border-left: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 741px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><span style="box-sizing: border-box;">City Code of the employee</span></span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; height: 16pt; border-top: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 179px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">Education_Level</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; border-top: none; border-left: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 741px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">Education level : Bachelor, Master or College</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; height: 16pt; border-top: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 179px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">Salary</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; border-top: none; border-left: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 741px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">Salary of the employee</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; height: 16pt; border-top: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 179px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><span style="box-sizing: border-box;">Dateofjoining</span></span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; border-top: none; border-left: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 741px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">Joining date for the employee</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; height: 16pt; border-top: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 179px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><span style="box-sizing: border-box;">LastWorkingDate</span></span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; border-top: none; border-left: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 741px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><span style="box-sizing: border-box;">Last date of working for the employee</span></span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; height: 16pt; border-top: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 179px;"><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 16px;"><span style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: nowrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">Joining Designation</span></span></span></span><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; border-top: none; border-left: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 741px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">Designation of the employee at the time of joining</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; height: 16pt; border-top: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 179px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><span style="box-sizing: border-box;">Designation</span></span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; border-top: none; border-left: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 741px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><span style="box-sizing: border-box;">Designation of the employee at the time of reporting</span></span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; height: 16pt; border-top: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 179px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">Total_Business_Value</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; border-top: none; border-left: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 741px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">The total business value acquired by the employee in a month</span></span><span style="color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;"><br></span><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">(negative business indicates cancellation/refund of sold insurance policies) &nbsp;</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; height: 16pt; border-top: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 179px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">Quarterly Rating</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; border-top: none; border-left: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 741px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">Quarterly rating of the employee: 1,2,3,4 (higher is better)</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+        </tr>
+    </tbody>
+</table>
+<p><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></p>
+<p><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 16px;"><span style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-weight: bolder;">Test Data</span></span></span></span><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><span style="box-sizing: border-box;"><br style="box-sizing: border-box;"></span></span></span></p>
+<table border="0" cellpadding="0" cellspacing="0" width="427">
+    <tbody style="box-sizing: border-box;">
+        <tr height="21" style="box-sizing: border-box; height: 16pt;">
+            <td height="21" style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; height: 16pt; width: 76px; border: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap;" width="87"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><span style="box-sizing: border-box;">Variable</span></span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; border-left: none; width: 414px; border-top: 0.5pt solid windowtext; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap;" width="340"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><span style="box-sizing: border-box;">Definition</span></span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; height: 16pt; border-top: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 76px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">Emp_ID</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; border-top: none; border-left: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 414px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">Unique Id for the employees</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+        </tr>
+    </tbody>
+</table>
+<p><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></p>
+<p><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 16px;"><span style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-size: 16px;"><span style="box-sizing: border-box; font-weight: bolder;">Sample Submission</span></span></span></span><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><span style="box-sizing: border-box;"><br style="box-sizing: border-box;"></span></span></span></p>
+<p><span style="box-sizing: border-box; font-family: Calibri, sans-serif;"><span style="box-sizing: border-box; font-size: 16px;"><span style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box;">This file contains the exact submission format for the predictions. Please submit the CSV file only.</span></span></span></span></p>
+<table border="0" cellpadding="0" cellspacing="0" width="427">
+    <tbody style="box-sizing: border-box;">
+        <tr height="21" style="box-sizing: border-box; height: 16pt;">
+            <td height="21" style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; height: 16pt; width: 76px; border: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap;" width="87"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><span style="box-sizing: border-box;">Variable</span></span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; border-left: none; width: 414px; border-top: 0.5pt solid windowtext; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap;" width="340"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><span style="box-sizing: border-box;">Definition</span></span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+        </tr>
+        <tr style="box-sizing: border-box;">
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; height: 16pt; border-top: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 76px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">Emp_ID</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; border-top: none; border-left: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 414px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">Employee ID</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+        </tr>
+        <tr height="21" style="box-sizing: border-box; height: 16pt;">
+            <td height="21" style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; height: 16pt; border-top: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; border-left: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 76px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">Target</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+            <td style="box-sizing: border-box; font-family: Calibri, sans-serif; margin: 0px; border-top: none; border-left: none; border-right: 0.5pt solid windowtext; border-bottom: 0.5pt solid windowtext; padding-top: 1px; padding-right: 1px; padding-left: 1px; color: black; font-size: 12pt; vertical-align: bottom; white-space: nowrap; width: 414px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">0: if the employee does not leave the organization,<br style="box-sizing: border-box;">1: if the employee leaves the organization</span><span style="color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></td>
+        </tr>
+    </tbody>
+</table>
+<p><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><br style="box-sizing: border-box;"></span></span></p>
+<p><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 20px; color: rgb(0, 0, 0);"><strong>Evaluation Metric</strong></span></span></p>
+<p><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><span style="box-sizing: border-box; font-weight: 400;">The evaluation metric for this competition is macro&nbsp;</span></span></span><span style="color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;"><a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html" rel="noopener noreferrer" target="_blank"><span style="box-sizing: border-box;"><span style="box-sizing: border-box; font-size: 16px;"><span style="box-sizing: border-box; font-weight: 400;">f1_score</span></span></span></a></span></p>
+<p><span style="font-family: Arial, Helvetica, sans-serif;"><br></span></p>
+<p><span style="box-sizing: border-box; font-size: 20px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box;"><strong>Guidelines for Final Submission</strong></span></span></span></p>
+<p><span style="box-sizing: border-box;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;">Please ensure that your final submission includes the following:</span></span></p>
+<ol>
+    <li style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box; font-size: 16px;">Solution file containing the predictions for the Emp_ID in the test set. (format is given in sample submission CSV)</span></span></li>
+    <li style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box;">A Zipped file containing code &amp; approach (<span style="box-sizing: border-box;">Note that both code and approach document are mandatory for shortlisting</span>)</span></span></li>
+</ol>
+<ul>
+    <li style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box;">Code:</span> Clean code with comments on each part</span></span></li>
+    <li style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box;">Approach:&nbsp;</span>Please share your approach&nbsp;to solve the problem (doc/ppt/pdf format). It should cover the following topics:</span></span>
+        <ol style="box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; font-weight: initial; font-family: initial;">
+            <li style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box;">A brief on the approach, which you have used to solve the problem.</span></span></li>
+            <li style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box;">What data-preprocessing / feature engineering ideas really worked? How did you discover them?</span></span></li>
+            <li style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box;">What does your final model look like? How did you reach it?</span></span></li>
+        </ol>
+    </li>
+</ul>
+<p><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">&nbsp;</span></span></p>
+<p><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 20px; color: rgb(0, 0, 0);"><strong>Public and Private Split</strong></span></span></p>
+<p><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);"><span style="box-sizing: border-box; font-weight: 400;">Test data is further randomly divided into Public (40%) and Private (60%) data.</span></span></span></p>
+<ul>
+    <li style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-weight: 400;">Your initial responses will be checked and scored on the Public data.</span></span></span></li>
+    <li style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-weight: 400;">The final rankings would be based on your private score which will be published once the competition is over.</span></span></span><br><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; color: rgb(0, 0, 0);">&nbsp; &nbsp;</span></span></li>
+</ul>
+<p><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 20px; color: rgb(0, 0, 0);"><strong>Submission Tutorials:</strong></span></span></p>
+<h2><span style="color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-size: 20px;">How to Make a Submission?</span></h2>
+<ul>
+    <li style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">All Submissions are to be done at the solution checker tab.</span></li>
+    <li style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">For a step by step view on how to make a submission check the below video</span></li>
+</ul>
+<h2><span style="color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;"><iframe src="https://www.youtube.com/embed/zevnI9TgTtA" width="700" height="380" frameborder="0" allowfullscreen="allowfullscreen" data-mce-fragment="1" style="box-sizing: border-box; border: 0px; background: none; box-shadow: none;"></iframe></span></h2>
+<p><span style="color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;"><br style="box-sizing: border-box;"></span></p>
+<h2><span style="color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-size: 20px;">How to Set Final Submission?</span></h2>
+<p><span style="color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;"><iframe src="https://www.youtube.com/embed/knx8aht0xUg" width="700" height="380" frameborder="0" allowfullscreen="allowfullscreen" data-mce-fragment="1" style="box-sizing: border-box; border: 0px; background: none; box-shadow: none;"></iframe></span></p>
+<h2><br><span style="box-sizing: border-box; font-size: 20px;"><span style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box;"><strong>Hackathon Rules</strong></span></span></span></h2>
+<ol>
+    <li style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box;"><em style="box-sizing: border-box;">The final standings would be based on private leaderboard score.</em></span></span></li>
+    <li style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box;">Setting the final submission is recommended. Without a final submission, the submission corresponding to best public score will be taken as the final submission</span></span></li>
+    <li style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box;">Use of external data is prohibited</span></span></li>
+    <li style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box;">Use of ID variable is not allowed as part of the model</span></span></li>
+    <li style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box;">You can only make <span style="box-sizing: border-box;">5&nbsp;submissions</span> per day</span></span></li>
+    <li style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box;">Entries submitted after the contest is closed, will not be considered</span></span></li>
+    <li style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box;">The code file pertaining to your final submission is mandatory while setting final submission</span></span></li>
+    <li style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box;">Throughout the hackathon, you are expected to respect fellow hackers and act with high integrity.</span></span></li>
+    <li style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box;"><span style="box-sizing: border-box;">Analytics Vidhya holds the right to disqualify any participant at any stage of the competition if the participant(s) are deemed to be acting fraudulently.</span></span></li>
+    <li style="box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;"><span style="box-sizing: border-box;">Use of multiple Login IDs will lead to immediate disqualification</span></li>
+</ol>
+  
+
+
+    
+      
+        
+
+
+<h2 id="data_dictionary">Data</h2>   
+
+    
+    <a class="btn av-btn-outline av-btn"
+        href="/contest/job-a-thon-november-2021/download/test-file"
+        target="blank" onclick="pushDatasetDownloadDetailsToDataLater('Test File', 'JOB-A-THON - November 2021', 'hiring')"
+        >
+       <i class="fa fa-download" ></i>Test File
+    </a>
+    
+
+    
+    <a class="btn av-btn-outline av-btn"
+        href="/contest/job-a-thon-november-2021/download/train-file"
+        target="blank" onclick="pushDatasetDownloadDetailsToDataLater('Train File', 'JOB-A-THON - November 2021', 'hiring')"
+        >
+      <i class="fa fa-download" ></i>Train File
+    </a> 
+
+
+    
+    <a class="sample-submission btn av-btn-outline av-btn"
+        href="/contest/job-a-thon-november-2021/download/sample-submission"
+        target="blank" onclick="pushDatasetDownloadDetailsToDataLater('Sample Submission', 'JOB-A-THON - November 2021', 'hiring')">
+       <i class="fa fa-download" ></i>Sample Submissions
+    </a> 
+
+
+    
+
+
+
+
+<script type="text/javascript">
+$(".test-file").click(function(e) {
+  var href = $(this).attr("href");
+<!--  push_clevertap_event_anchor(e, href, "Test File", {-->
+<!--    "Title": "job-a-thon-november-2021",-->
+<!--    "Prize": "Job Opportunities with Top Companies"-->
+<!--  });-->
+});
+$(".train-file").click(function(e) {
+  var href = $(this).attr("href");
+<!--  push_clevertap_event_anchor(e, href, "Train File", {-->
+<!--    "Title": "job-a-thon-november-2021",-->
+<!--    "Prize": "Job Opportunities with Top Companies"-->
+<!--  });-->
+});
+$(".sample-submission").click(function(e) {
+  var href = $(this).attr("href");
+<!--  push_clevertap_event_anchor(e, href, "Sample Submission", {-->
+<!--    "Title": "job-a-thon-november-2021",-->
+<!--    "Prize": "Job Opportunities with Top Companies"-->
+<!--  });-->
+});
+
+</script>
+<script>
+function pushDatasetDownloadDetailsToDataLater(data_type, contest_name, contest_purpose){
+  dataLayer.push({
+    event:"datalayer_click",
+    'datahack_DetailPage_downloadedDataset_typeOfData': data_type,
+    'datahack_DetailPage_downloadedDataset_contestName': contest_name,
+    'datahack_DetailPage_downloadedDataset_contestPurpose': contest_purpose
+  });
+}
+</script>
+
+
+      
+    
+
+
+                </div>
+                <div class="tab-pane fade" id="SolutionChecker" role="tabpanel" aria-labelledby="SolutionChecker-tab">
+                  
+  
+    
+    <div class="row solution-checker-form">
+      <div class="t"></div>
+      <form action="" method = "post" enctype = "multipart/form-data" class="form-horizontal" id ="form1">
+        <input type="hidden" name="csrfmiddlewaretoken" value="QMlRZq6DWXbP5CkIwPvfi4L2rDvNlvRm0j7dnnfcsnQFHmVxOMde3VMIWMytqlmq">
+        <div class="form-group row">
+          <label for="code_file1" class="col-lg-4 col-md-4 col-sm-12 col-form-label">Code File </label>
+          <div class="col-lg-8 col-md-8 col-sm-12">
+            <label class="btn-bs-file btn av-btn-outline av-btn files">
+              <i class="fa fa-upload"></i> Upload File
+              <input type="file" name = "code_file" class = "form-control"  id = "code_file1" onchange='setCodeFilePath(this)' required>
+            </label>
+            <small class="form-text text-muted" id="code-file-placeholder-name"></small>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="solution_file1" class="col-lg-4 col-md-4 col-sm-12 col-form-label">Solution File*</label>
+          <div class="col-lg-8 col-md-8 col-sm-12">
+            <label class="btn-bs-file btn av-btn-outline av-btn files">
+              <i class="fa fa-upload"></i> Upload File
+              <input type="file" accept=".csv" name = "solution_file" class = "form-control"  id = "solution_file1" onchange='setSolutionFilePath(this)' required>
+            </label>
+            (<strong>.csv only</strong>)
+            <small class="form-text text-muted"  id="solution-file-placeholder-name"></small>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="message1" class="col-lg-4 col-md-4 col-sm-12 col-form-label">Solution Description<br/> (max : 180 chars)*</label>
+          <div class="col-lg-8 col-md-8 col-sm-12">
+            <input type="text" name = "message" class = "form-control" placeholder = "Solution Description (for your interest)" value = "" maxlength = "180" id = "message1">
+          </div>
+        </div>
+        
+          <div class="form-group row">
+            <label class="col-lg-4 col-md-4 col-sm-12 col-form-label"> Do you want to show your code on leaderboard?</label>
+            <input id="show_code_lb_query" value="True" hidden="true">
+            <div class="col-lg-8 col-md-8 col-sm-12">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="code_link_display1" name="code_link_display" onclick="link_display()" value = "True" class="custom-control-input code_link">
+                <label class="custom-control-label" for="code_link_display1">Yes</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="code_link_display2" name="code_link_display" onclick="link_display()" value = "False" class="custom-control-input code_link">
+                <label class="custom-control-label" for="code_link_display2">No</label>
+              </div>
+            </div>
+          </div>
+        
+        
+          
+            <button type="button" id = "sub1" class="av-btn-red btn text-capitalize px-4 col-md-6 offset-md-4" onclick="file_checker('url1')">Add Solution</button>
+          
+        
+      </form>
+    </div>
+
+    
+<p>You have made <b>0</b> submissions out of <b>5</b> allowed submissions for the day.</p>
+    
+
+  
+
+
+<script type="text/javascript" charset="utf-8" async defer>
+
+function link_display() {
+  document.getElementById("sub1").disabled = false;
+};
+
+function file_checker(url_name) {
+
+  $('#code-file-placeholder-name').html('')
+  $('#solution-file-placeholder-name').html('')
+     var solution_filename = $("#solution_file1").val();
+     var code_file = $("#code_file1").val();
+     var code_link = '';
+
+     if($("#show_code_lb_query").val() == 'True') {
+        code_link = $("input[name='code_link_display']:checked").val();
+     } else {
+        code_link = 'False';
+     }
+
+     var commit_message = $("#message1").val();
+     var solution_file_ext = $('#solution_file1').val().split('.').pop().toLowerCase();
+
+     if(solution_filename == "") {
+          $("#modal-body").html("Solution File is required. Please upload solution File");
+          $('#myModal').modal('show');
+     }
+     else {
+         
+            if($.inArray('.' + solution_file_ext, ['.csv']) == -1) {
+                 $("#modal-body").html("Invalid Solution File . Please upload a valid solution File. <br/>Only " + ".csv" + " files are allowed");
+                 $('#myModal').modal('show');
+                 return false ;
+            }
+         
+
+    if (commit_message == "")
+     {
+          $("#modal-body").html("Message is required. Please add a message to your Solution");
+          $('#myModal').modal('show');
+     }
+     else
+     {
+    if(code_link != 'True' && code_link != 'False' && ($.inArray(purpose, ["ama", "case_study", "blogathon", "excel", "learnup", "mcq", "visualize", "workshop"] ) > -1)){
+          $("#modal-body").html("Please select Yes/NO to question <strong>Do you want to show your code on leaderboard?<strong> ");
+          $('#myModal').modal('show');
+     }
+     else
+     {
+          var a = "<img loading='lazy' src = 'https://datahack-prod.s3.ap-south-1.amazonaws.com/profile_photos/oie_91149170D2m4jGB.gif' class = '' style = 'width:250px;margin-left:30%'><div class='progress progress-striped active col-md-12 col-sm-12 col-xs-12 col-lg-12'><div class='progress-bar' role='progressbar' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100'></div></div>"
+          $("#modal-body1").html(a)
+          $("#modal-header1").html("Uploading");
+          $('#myModal1').modal('show');
+          // $('#linkedin-screenshot').addClass('d-none');
+          upload(url_name);
+     }
+     }
+     }
+ }
+
+   function setCodeFilePath(obj) {
+      if(obj.files) {
+        $('#code-file-placeholder-name').html(obj.files[0].name)
+      }
+
+   }
+
+  function setSolutionFilePath(obj) {
+    if(obj.files) {
+      $('#solution-file-placeholder-name').html(obj.files[0].name)
+    }
+  }
+
+  $(document).ready(function() {
+
+    console.log("Document ready was called");
+    
+
+      $('#myModal1').modal('hide');
+
+    
+  });
+
+  function upload(url_name){
+    var data = new FormData($('#form1').get(0));
+    data["csrfmiddlewaretoken"] = "QMlRZq6DWXbP5CkIwPvfi4L2rDvNlvRm0j7dnnfcsnQFHmVxOMde3VMIWMytqlmq";
+    
+      var lnk = "/problem/K7MPZUBAT168AHK/add-programming-answer/"
+    
+    $.ajax({
+      xhr: function()
+      {
+        var xhr = new window.XMLHttpRequest();
+        //Upload progress
+        xhr.upload.addEventListener("progress", function(evt){
+          if (evt.lengthComputable) {
+            var percentComplete = evt.loaded * 100/ evt.total ;
+            $('.progress-bar').css('width', percentComplete+'%').attr('aria-valuenow', percentComplete);
+          }
+        }, false);
+        //Download progress
+        xhr.addEventListener("progress", function(evt){
+          if (evt.lengthComputable) {
+            var percentComplete = evt.loaded / evt.total;
+          }
+        }, false);
+
+        return xhr;
+      },
+      url: lnk,
+      type: 'POST',
+      data: data,
+      cache: false,
+      processData: false,
+      contentType: false,
+      success: function(data) {
+        console.log("in success");
+        $(".hid").css({"display":"none"});
+        $("#solution_file1").val("");
+        $("#message1").val("");
+        if(data["error"])
+        {
+          $("#modal-body").html(data["message"]);
+
+          setTimeout(function() {
+            $('#myModal').modal('show');
+            $('#myModal1').modal('hide');
+          },1000);
+
+        }
+        else{
+          $('#SolutionChecker').html(data)
+        }
+      },
+      error : function(data){
+        $(".hid").css({"display":"none"});
+        $("#solution_file1").val("");
+        $("#message1").val("");
+        $("#modal-body").html("Some error occured. Please try after some time.");
+        setTimeout(function() {
+          $('#myModal').modal('show');
+          $('#myModal1').modal('hide');
+        },1000);
+
+      }
+    });
+   }
+
+</script>
+
+
+                </div>
+                <div class="tab-pane fade" id="DiscussTab" role="tabpanel" aria-labelledby="Discuss-tab">
+                </div>
+                <div class="tab-pane fade" id="MentorshipTab" role="tabpanel" aria-labelledby="Mentorship-tab">
+                </div>
+                <div class="tab-pane fade" id="MySubmissions" role="tabpanel" aria-labelledby="MySubmissions-tab">
+                </div>
+                <div class="tab-pane fade" id="LeaderBoard" role="tabpanel" aria-labelledby="LeaderBoard-tab">
+                </div>
+                <div class="tab-pane fade" id="SkillTestLeaderBoard" role="tabpanel" aria-labelledby="SkillTestLeaderBoard-tab">
+                </div>
+                <div class="tab-pane fade" id="Team" role="tabpanel" aria-labelledby="Team-tab">
+                  <p>Please register to participate in the contest</p>
+                </div>
+                <div class="tab-pane fade" id="StatusTab" role="tabpanel" aria-labelledby="Status-tab">
+                </div>
+              </div>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- INTERVIEW MODAL -->
+<div class="modal fade full-modal" id="interviewModal"  tabindex="-1" role="dialog" aria-labelledby="interviewModalLabel" aria-hidden="true">
+  <div class="modal-dialog fixed-top modal-dialog-scrollable" role="document">
+    <div class="modal-content" style="min-height: 100vh;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="interviewModalLabel">Please select your top five prefered companies</h5>
+      </div>
+      <div class="modal-body">
+        <div class="checkbox-row">
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="161">
+              <label class="custom-control-label" for="161">ACL Digital</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="154">
+              <label class="custom-control-label" for="154">Advatix</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="142">
+              <label class="custom-control-label" for="142">BDB</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="152">
+              <label class="custom-control-label" for="152">Bridgei2i</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="144">
+              <label class="custom-control-label" for="144">Cars24</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="159">
+              <label class="custom-control-label" for="159">Chola</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="139">
+              <label class="custom-control-label" for="139">Circle Base</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="146">
+              <label class="custom-control-label" for="146">Cogito</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="153">
+              <label class="custom-control-label" for="153">Comcast</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="133">
+              <label class="custom-control-label" for="133">Deloitte</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="162">
+              <label class="custom-control-label" for="162">Flipkart</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="132">
+              <label class="custom-control-label" for="132">Fractal</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="141">
+              <label class="custom-control-label" for="141">Genpact</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="155">
+              <label class="custom-control-label" for="155">GoDigit</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="135">
+              <label class="custom-control-label" for="135">Gramener</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="156">
+              <label class="custom-control-label" for="156">HDFC Bank</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="151">
+              <label class="custom-control-label" for="151">IDFC</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="140">
+              <label class="custom-control-label" for="140">IKS Health</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="150">
+              <label class="custom-control-label" for="150">Kotak Mahindra Bank</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="131">
+              <label class="custom-control-label" for="131">Latent View</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="143">
+              <label class="custom-control-label" for="143">Lumiq</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="137">
+              <label class="custom-control-label" for="137">Meesho</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="136">
+              <label class="custom-control-label" for="136">MiQ</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="134">
+              <label class="custom-control-label" for="134">PaisaBazaar</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="157">
+              <label class="custom-control-label" for="157">Paypal</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="147">
+              <label class="custom-control-label" for="147">Propellor</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="149">
+              <label class="custom-control-label" for="149">Smart Cube</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="158">
+              <label class="custom-control-label" for="158">SymphonyAI</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="160">
+              <label class="custom-control-label" for="160">Techvantage</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="163">
+              <label class="custom-control-label" for="163">Tesco</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="138">
+              <label class="custom-control-label" for="138">Tiger Analytics</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="148">
+              <label class="custom-control-label" for="148">eClerx</label>
+            </div>
+          
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="145">
+              <label class="custom-control-label" for="145">mPokket</label>
+            </div>
+          
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn av-btn-outline px-4 mt-3 text-white" id="save-company-preference" disabled>Save</button>
+        <button type="button" class="btn av-btn-outline px-4 mt-3 text-white" id="save-company-preference-and-redirect" disabled>Save & Start</button>
+        
+        <button type="button" class="btn av-btn-outline px-4 mt-3 text-white" data-dismiss="modal" aria-label="Close">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- CONTEST DETAILS PAGE END -->
+
+  <div class="container" >
+    <div class="row">
+    
+    </div>
+  </div>
+  <a href="https://www.analyticsvidhya.com/contact/" target="_blank" class="btn text-white px-2 av-btn" id="av_Feedback">Support <i class="fas fa-comment-dots"></i></a>
+</div>
+
+
+  
+<footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <a href="https://www.analyticsvidhya.com/">
+            <img loading='lazy' src="https://av-public-assets.s3.ap-south-1.amazonaws.com/logos/AV_logo_wite.png"  alt='Analytics Vidhya' width="85%">
+          </a>
+          <div class="download-av-app">
+            <h6 class="d-flex align-items-center">Download App</h6>
+            <a rel="nofollow" href="https://play.google.com/store/apps/details?id=com.analyticsvidhya.android" target="_blank">
+              <img loading='lazy' src="/static/images/play_store_icon.49aadc124788.svg"  alt='play store'>
+            </a>
+            <a rel="nofollow" href="https://apps.apple.com/us/app/analytics-vidhya/id1470025572" target="_blank">
+              <img loading='lazy' src="/static/images/app_Store_icon.9eda9dd200b5.svg"  alt='App Store'>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12">
+          <div class="av-links">
+            <ul>
+              <li>
+                <h6>Analytics Vidhya</h6>
+                <a href="https://www.analyticsvidhya.com/about/">About Us</a>
+                <a href="https://www.analyticsvidhya.com/team/">Our Team</a>
+                <a href="https://www.analyticsvidhya.com/careers/">Careers</a>
+                <a href="https://www.analyticsvidhya.com/contact/">Support</a>
+              </li>
+              <li>
+                <h6>Data Scientists</h6>
+                <a href="https://www.analyticsvidhya.com/blog/">Blog</a>
+                <a href="https://datahack.analyticsvidhya.com/">Hackathon</a>
+                <a href="https://discuss.analyticsvidhya.com/">Discussions</a>
+                <a href="https://www.analyticsvidhya.com/jobs/">Apply Jobs</a>
+              </li>
+              <li>
+                <h6>Companies</h6>
+                <a href="https://www.analyticsvidhya.com/corporate/">Post Jobs</a>
+                <a href="https://courses.analyticsvidhya.com/">Trainings</a>
+                <a href="https://datahack.analyticsvidhya.com/">Hiring Hackathons</a>
+                <a href="https://www.analyticsvidhya.com/contact/">Advertising</a>
+              </li>
+              <li>
+                <h6>Visit us</h6>
+                <div class="av-get-social">
+                    <a rel="nofollow" href="https://www.facebook.com/AnalyticsVidhya/" target="_blank" class="social-visit fb mr-2">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a rel="nofollow" href="https://www.linkedin.com/company/analytics-vidhya/" target="_blank" class="social-visit in mr-2">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a rel="nofollow" href="https://www.youtube.com/channel/UCH6gDteHtH4hg3o2343iObA" target="_blank" class="social-visit utub mr-2">
+                      <i class="fab fa-youtube"></i>
+                    </a>
+                    <a rel="nofollow" href="https://twitter.com/analyticsvidhya" target="_blank" class="social-visit tw mr-2">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--FOOTER THIRD ROW START-->
+    <div class="footer-link-bottom">
+      <div class="container">
+        <div class="row">
+            <div class="mr-auto">
+              <p>© Copyright 2013-2021 Analytics Vidhya.</p>
+            </div>
+            <div class="ml-auto">
+              <a href="https://www.analyticsvidhya.com/privacy-policy/" target="_blank">Privacy Policy</a>
+              <a href="https://www.analyticsvidhya.com/terms/" target="_blank">Terms of Use</a>
+              <a href="https://www.analyticsvidhya.com/refund-policy/" target="_blank">Refund Policy</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!--FOOTER THIRD ROW END-->
+</footer>
+
+
+
+<form id="logout-form" action="/oidc/logout/" method="post"><input type="hidden" name="csrfmiddlewaretoken" value="QMlRZq6DWXbP5CkIwPvfi4L2rDvNlvRm0j7dnnfcsnQFHmVxOMde3VMIWMytqlmq">
+</form>
+    <script src="/static/CACHE/js/output.3639002ecf51.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.1/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+<script src="/static/tinymce/js/tinymce/tinymce.min.js" type="text/javascript"></script>
+
+
+<script type="text/javascript" src="/static/js/mention.plugin.36350daebc30.js"></script>
+<script>
+var leaderboardSocket = ''
+var discussSocket = ''
+$(document).ready(function(){
+  
+  $('#myTab a').click(function(e) {
+    $(this).tab('show');
+  });
+  // store the currently selected tab in the hash value
+  $("ul.nav-tabs > li > a").on("shown.bs.tab", function(e) {
+    var id = $(e.target).attr("href").substr(1);
+    window.location.hash = id;
+  });
+  // on load of the page: switch to the currently selected tab
+  var activeTab = window.location.hash;
+  if(activeTab=="#LeaderBoard"){
+      $('#LeaderBoard-tab').trigger("click");
+      $('#myTab a[href="' + activeTab + '"]').tab('show');
+  } else if (activeTab == "#MySubmissions") {
+    $('#MySubmissions-tab').trigger("click");
+    $('#myTab a[href="' + activeTab + '"]').tab('show');
+  }else if (activeTab == "#DiscussTab") {
+    $('#Discuss-tab').trigger("click");
+    $('#myTab a[href="' + activeTab + '"]').tab('show');
+  }else if(activeTab == "#MentorshipTab"){
+    $('#Mentorship-tab').trigger("click");
+    $('#myTab a[href="' + activeTab + '"]').tab('show');
+  }else if(activeTab == "#StatusTab"){
+    $('#Status-tab').trigger("click");
+    $('#myTab a[href="' + activeTab + '"]').tab('show');
+  }else if(activeTab == "#SkillTestLeaderBoard"){
+    $('#SkillTestLeaderBoard-tab').trigger("click");
+    $('#myTab a[href="' + activeTab + '"]').tab('show');
+  }
+  else {
+    $('#myTab a[href="' + activeTab + '"]').tab('show');
+  }
+  if($("#terms_and_cond")){
+    $("#terms_and_cond").modal("show");
+  }
+  // modal to display similar contests
+  
+    $('#similarcontests').modal("hide");
+  
+
+});
+
+$('#MySubmissions-tab').click(function() {
+   console.log("My submissions tab was clicked")
+   var loader = document.getElementById('av-api-response-loader');
+   loader.style.display = "block";
+
+   $('#MySubmissions').html('').load(
+     "/contest/job-a-thon-november-2021/get_submissions_list"
+   )
+   dataLayer.push({
+     event:"datalayer_click",
+    'datahack_DetailPage_tab_tabName': 'MySubmissions Tab',
+    'datahack_DetailPage_tab_contestName': 'JOB-A-THON - November 2021',
+    'datahack_DetailPage_tab_contestPurpose': 'hiring'
+  });
+
+});
+
+function showDiscussions(obj) {
+  console.log("inside discuss")
+  var loader = document.getElementById('av-api-response-loader');
+  loader.style.display = "block";
+  contest_slug = 'job-a-thon-november-2021'
+  contest_id = '1136'
+  discussSocket = new WebSocket(((window.location.protocol === 'https:') ? 'wss://' : 'ws://') +window.location.host+'/ws/discussion/'+contest_id+'/'+contest_slug+'/');
+  console.log(discussSocket)
+  $('#DiscussTab').load("/contest/job-a-thon-november-2021/discussions/None/")
+  dataLayer.push({
+    event:"datalayer_click",
+    'datahack_DetailPage_tab_tabName': 'DiscussTab',
+    'datahack_DetailPage_tab_contestName': 'JOB-A-THON - November 2021',
+    'datahack_DetailPage_tab_contestPurpose': 'hiring'
+  });
+
+}
+
+function showMentors(obj) {
+  console.log("inside mentors")
+  var loader = document.getElementById('av-api-response-loader');
+  loader.style.display = "block";
+  $('#MentorshipTab').load("/contest/job-a-thon-november-2021/superpro-approved-listing-page/1/")
+  dataLayer.push({
+    event:"datalayer_click",
+    'datahack_DetailPage_tab_tabName': 'MentorshipTab',
+    'datahack_DetailPage_tab_contestName': 'JOB-A-THON - November 2021',
+    'datahack_DetailPage_tab_contestPurpose': 'hiring'
+  });
+
+}
+
+function showhpstatustab(obj){
+  console.log("inside status tabs")
+  var loader = document.getElementById('av-api-response-loader');
+  loader.style.display = "block";
+  $('#StatusTab').load("/contest/job-a-thon-november-2021/jobathon-profile-status-tab/1/")
+  dataLayer.push({
+    event:"datalayer_click",
+    'datahack_DetailPage_tab_tabName': 'StatusTab',
+    'datahack_DetailPage_tab_contestName': 'JOB-A-THON - November 2021',
+    'datahack_DetailPage_tab_contestPurpose': 'hiring'
+  });
+
+}
+
+function showLeaderboard(obj) {
+  var loader = document.getElementById('av-api-response-loader');
+  loader.style.display = "block";
+  
+    
+      var contest_slug = "job-a-thon-november-2021"
+      leaderboardSocket = new WebSocket(((window.location.protocol === 'https:') ? 'wss://' : 'ws://')+window.location.host+'/ws/leaderboard/'+contest_slug+'/');
+      console.log("Contest has not expired, so Public leaderboard is called")
+      console.log(leaderboardSocket)
+      $('#LeaderBoard').load( "/contest/job-a-thon-november-2021/lb/1/")
+    
+  
+  dataLayer.push({
+    event:"datalayer_click",
+    'datahack_DetailPage_tab_tabName': 'LeaderBoardTab',
+    'datahack_DetailPage_tab_contestName': 'JOB-A-THON - November 2021',
+    'datahack_DetailPage_tab_contestPurpose': 'hiring'
+  });
+
+}
+function showSkillTestLeaderBoard(obj) {
+  var loader = document.getElementById('av-api-response-loader');
+  loader.style.display = "block";
+  $('#SkillTestLeaderBoard').load( "/leaderboard/job-a-thon-november-2021/skill-lb/1/")
+  dataLayer.push({
+    event:"datalayer_click",
+    'datahack_DetailPage_tab_tabName': 'SkillTestLeaderBoardTab',
+    'datahack_DetailPage_tab_contestName': 'JOB-A-THON - November 2021',
+    'datahack_DetailPage_tab_contestPurpose': 'hiring'
+  });
+
+}
+function pushTabDetailsToDataLater(tab_name, contest_name, contest_purpose){
+  dataLayer.push({
+    event:"datalayer_click",
+    'datahack_DetailPage_tab_tabName': tab_name,
+    'datahack_DetailPage_tab_contestName': contest_name,
+    'datahack_DetailPage_tab_contestPurpose': contest_purpose
+  });
+  }
+
+// <!--Check if following function is being used. Remove if not-->
+// <!--function page_reload(argument) {-->
+// <!--  window.location.reload();-->
+// <!--}-->
+
+// <!--function preference_selector(){-->
+// <!--  var checkboxes = document.getElementsByName('preference');-->
+// <!--  var slugs = [];-->
+// <!--  for (var i=0; i<checkboxes.length; i++) {-->
+// <!--     // And stick the checked ones onto an array...-->
+// <!--     if (checkboxes[i].checked) {-->
+// <!--        slugs.push(checkboxes[i].value);-->
+// <!--     }-->
+// <!--  }-->
+// <!--  var slug = {"slugs":slugs,-->
+// <!--                "csrfmiddlewaretoken":"QMlRZq6DWXbP5CkIwPvfi4L2rDvNlvRm0j7dnnfcsnQFHmVxOMde3VMIWMytqlmq"-->
+// <!--                };-->
+
+// <!--  $.ajax({-->
+// <!--   type : 'POST',-->
+// <!--   url : '/contest/bulkparticipate/',-->
+// <!--   dataType : 'json',-->
+// <!--   data : slug,-->
+// <!--   success : function(data){-->
+// <!--    if (data["error"]){-->
+// <!--            $("#similarcontests").modal("hide");-->
+// <!--            $("#modal-header1").html("Error");-->
+// <!--            $("#modal-body").html("Please complete your profile.");-->
+// <!--            $('#myModal').modal('show');-->
+// <!--         }-->
+// <!--        else{-->
+// <!--          if(data["not_registered"].length != 0){-->
+// <!--          $("#similarcontests").modal("hide");-->
+// <!--            $("#modal-header1").html("Error");-->
+// <!--            $("#modal-body").html("Please try to register \-->
+// <!--                                   again after updating your profile \-->
+// <!--                                   for "+data["not_registered"]);-->
+// <!--            $('#myModal').modal('show');-->
+// <!--          }-->
+// <!--          else{-->
+// <!--          window.location.reload();-->
+// <!--        }-->
+// <!--          }-->
+// <!--   }-->
+// <!-- });-->
+// <!--}-->
+var purpose = $('#purpose').attr('value');
+var sp_purpose = ['visualize','excel'];
+var cd_purpose = ['workshop','normal','learnup','practice','case_study','mcq','hiring', 'ama'];
+var lb_purpose = ['normal','practice','hiring'];
+
+if ($.inArray(purpose, cd_purpose ) > -1)
+{
+  $(document).ready(function(){
+  $.ajax({
+    type: "GET",
+    url: "./countdowns/",
+    success: function(result){
+
+      obj = JSON.parse(result)
+      if (obj.time_to_start > 0){
+        var time_remaining = obj.time_to_start;
+        message = "<div class='mckinsey-data-status'><span class='text-uppercase'>starts in</span></div>";
+      }
+      else if (obj.time_to_end > 0){
+        message = "<div class='mckinsey-data-status'><span class='text-uppercase'> ends in </span></div>";
+        var time_remaining = obj.time_to_end;
+      }
+
+      if (time_remaining ){
+      window.setInterval(function(){
+
+          time_remaining =  time_remaining - 1
+          if (time_remaining==0){
+            location.reload(true);
+          }
+          days = (Math.floor(time_remaining/86400));
+          hours = (Math.floor((time_remaining-days*86400)/3600));
+          minutes = (Math.floor((time_remaining % 3600)/60));
+          seconds = (Math.floor(time_remaining%60));
+          if (days < 1)
+          {
+            <!-- message_text = message + hours + "<small>hours</small>: " + minutes + "<small>minutes</small>: " + seconds  + "<small>seconds</small>"; -->
+            message_text = message + "<p>"
+              + "<span>" + hours + " <span>hours</span> </span>"
+              + "<span>" + minutes + " <span>min</span> </span>"
+              + "<span>" + seconds + " <span>sec</span> </span>"
+            + "</p>";
+          }
+          else{
+            <!-- message_text = message + days + "<small>days</small>: "  + hours + "<small>hours</small>: " + minutes + "<small>minutes</small>: " + seconds  + "<small>seconds</small>"; -->
+            message_text = message + "<p>"
+                + "<span>" + days + "<span>days</span> </span>"
+                + "<span>" + hours + " <span>hours</span> </span>"
+                + "<span>" + minutes + " <span>min</span> </span>"
+                <!-- + "<span>" + seconds + "  <span>sec</span> </span>" -->
+              + "</p>";
+          }
+          $("#countdown-timer").html( "<center>" + message_text + "</center>" );
+      }, 1000);
+      }
+
+    }
+  });
+});
+
+}
+
+if ($.inArray(purpose, sp_purpose ) > -1)
+{
+  $("#submit").click(function(){
+  var data = new FormData($('#form-submissions').get(0));
+  $.ajax({
+      url: '/problem/job-a-thon-november-2021/update-final-solution/',
+      type: 'POST',
+      data: data,
+      cache: false,
+      processData: false,
+      contentType: false,
+      success: function(data) {
+         if(data["error"] == "true")
+         {
+            $("#myModal3").modal("hide");
+            $("#modal-header1").html("Error");
+            $("#modal-body").html(data["message"]);
+            $('#myModal').modal('show');
+         }
+         else{
+             $("#myModal3").modal("hide");
+             $("#modal-header1").html("Success");
+             $("#modal-body1").html("Your Final Sumbission has been set successfully.");
+             $('#myModal1').modal('show');
+         }
+      },
+      error : function(data){
+            $("#myModal3").modal("hide");
+            $("#modal-body").html("Unable to connect to backend");
+            $('#myModal').modal('show');
+      }
+  });
+});
+
+$("#submit_2").click(function(){
+  var data = new FormData($('#form-submissions').get(0));
+  $.ajax({
+      url: '/problem/job-a-thon-november-2021/update-multiple-final-solution/',
+      type: 'POST',
+      data: data,
+      cache: false,
+      processData: false,
+      contentType: false,
+      success: function(data) {
+         if(data["error"] == "true")
+         {
+            $("#myModal3").modal("hide");
+            $("#modal-header1").html("Error");
+            $("#modal-body").html(data["message"]);
+            $('#myModal').modal('show');
+         }
+         else{
+            $("#myModal3").modal("hide");
+            $("#modal-header1").html("Success");
+            $("#modal-body1").html(data["message"]);
+            $("#myModal1").modal('show');         
+         }
+      },
+      error : function(data){
+            $("#myModal3").modal("hide");
+            $("#modal-body").html("Some error occured");
+            $('#myModal').modal('show');
+      }
+  });
+});
+
+}
+else{
+  $("#selection_done").click(function(){
+  var message = "Are you sure you want to set this submission as your final submission. If yes, then you'll have to add your code file for this submission. ";
+  var user_confirmation  = confirm(message);
+  if (user_confirmation)
+  {
+     add_code_file_form();
+  }
+
+});
+$("#submit").click(function(){
+  var data = new FormData($('#form-submissions').get(0));
+  $.ajax({
+      url: '/problem/job-a-thon-november-2021/update-final-solution/',
+      type: 'POST',
+      data: data,
+      cache: false,
+      processData: false,
+      contentType: false,
+      success: function(data) {
+         if(data["error"] == "true")
+         {
+            $("#myModal3").modal("hide");
+            $("#modal-header1").html("Error");
+            $("#modal-body").html(data["message"]);
+            $('#myModal').modal('show');
+         }
+         else{
+             <!-- fetch_final_for_multiple_selections(); -->
+             $("#myModal3").modal("hide");
+             $("#modal-header1").html("Success");
+             $("#modal-body1").html(data["message"]);
+             $('#myModal1').modal('show');
+         }
+      },
+      error : function(data){
+            $("#myModal3").modal("hide");
+            $("#modal-body").html("Unable to connect to backend");
+            $('#myModal').modal('show');
+      }
+  });
+});
+
+function add_code_file_form(){
+    $("#myModal3 .modal-dialog").css("height",$(window).height()*0.7);
+    $("#myModal3 .modal-dialog").css("width",$(window).width()*0.7);
+}
+
+}
+
+   var names;
+
+    $("#sub2").click(function(){
+         file_checker("url2");
+     });
+
+   $(document).keypress(function(e) {
+       if(e.which == 13) {
+          e.preventDefault();
+          file_checker();
+       }
+   });
+
+
+
+
+
+
+
+$(document).ready(function(){
+       var height = $("#main_content").height();
+       $("#left_side_bar").height(height);
+});
+
+
+</script>
+<script>
+  $('#start-assessment').click(function(){
+    
+    var url=""
+    if("job-a-thon-november-2021" == "job-a-thon-november-2021"){
+      url="https://certification.analyticsvidhya.com/test/datahack/job-a-thon-november-2021";
+    }else if("job-a-thon-november-2021" == "intern-a-thon-november-2021"){
+      url="https://certification.analyticsvidhya.com/test/datahack/intern-a-thon-november-2021";
+    }
+    if(confirm("Are you sure you want to start the test?")){
+        window.location.replace(url);
+    }
+    else{
+      return false;
+    }
+  });
+  
+
+</script>
+<script>
+var contest_type = ''
+
+    var contest_type = 'activeContest'
+
+dataLayer.push({
+  event:"datalayer_click",
+  'datahack_allContest_contestType': contest_type,
+  'datahack_allContest_url': window.location.href,
+  'datahack_allContest_contestName': 'JOB-A-THON - November 2021',
+  'datahack_allContest_contestPurpose': 'hiring'
+  });
+</script>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPSM42V"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+    
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.av-slick-testiminials').slick({
+          infinite: true,
+          dots: false,
+          arrows: false,
+          responsive: [
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: true
+              }
+            }
+          ]
+
+        });
+
+        // Slider custom control
+        $('.prev').click(function(){
+          $('.av-slick-testiminials').slick('slickPrev');
+        })
+
+        $('.next').click(function(){
+          $('.av-slick-testiminials').slick('slickNext');
+        })
+      });
+
+    </script>
+
+
+<!-- AV FEEDBACK HTML -->
+<div class="av-feedback-form" id="avFeedbackFrom">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Feedback</h4>
+        <h6>We believe in making Analytics Vidhya the best experience possible for Data Science enthusiasts.
+          Help us by providing valuable Feedback.</h6>
+          <div class="form-group">
+            <label for="avFeedbackField"><small>Type your feedback <em class="text-danger">*</em></small></label>
+            <textarea class="form-control" id="avFeedbackField" rows="3"></textarea>
+            <p class="text-danger" id="errorMessage"><small></small></p>
+            <p class="text-success" id="successMessage"><small></small></p>
+          </div>
+      </div>
+      <button type="submit" class="btn text-white px-4 av-btn" onclick="submitFeedback(this)">Submit</button>
+    </div>
+</div>
+
+<!-- Flash Strip for marketing campaign -->
+<script type="text/javascript" src="https://automation.analyticsvidhya.com/static/js/getFlashDetailsNew.js" defer></script>
+<!-- Right Side Banner for marketing campaign -->
+<script src="https://automation.analyticsvidhya.com/static/js/getAVBanner.js"></script>
+<!-- Flash Strip for marketing campaign  ends-->
+
+</body>
+<script>
+
+  function submitFeedback(obj) {
+    var avTextField = $('#avFeedbackField').val();
+    if(avTextField == "") {
+     $('#errorMessage').html('Please enter a description.')
+
+    }
+    else
+    {
+      let url = "/post_feedback/"
+      var data = {
+        "comment": avTextField
+      };
+
+
+      $.ajax({
+           url: url,
+           type: 'POST',
+           data: JSON.stringify(data),
+           dataType: "json",
+           contentType: 'application/json',
+           success: function(data) {
+              if (data["success"]) {
+                $('#errorMessage').html('')
+                $('#successMessage').html('Thanks for your valuable feedback. It will help us make the platform bug-free and more useful for you and other users in the community.')
+                $('#avFeedbackField').val('').empty();
+              }
+
+           },
+           error : function(err){
+             if (data["error"]) {
+                $('#errorMessage').html('Please enter a description.')
+                $('#successMessage').html('')
+             }
+           }
+
+       });
+     }
+
+  }
+
+  dataLayer.push({
+    event:"datahack_login",
+    "datahack_user_email" : "official.tausif.786@gmail.com"
+  });
+
+</script>
+<!-- One tap signup Script-->
+
+</html>
